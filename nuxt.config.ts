@@ -7,7 +7,7 @@ export default defineNuxtConfig({
   },
   app: {
     head: {
-      title: 'Портфолио'
+      title: 'Карпов Юрий - Веб разработчик'
     }
   },
   css: [
@@ -29,7 +29,9 @@ export default defineNuxtConfig({
       Roboto: {
         wght: [700]
       },
-      Raleway: true
+      Raleway: {
+        wght: [500]
+      }
     }
   }
 });

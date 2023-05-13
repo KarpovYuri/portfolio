@@ -25,7 +25,7 @@
         </NuxtLink>
       </li>
     </ul>
-    <div class="mobile-nav-toggle" @click="toggleModal" />
+    <button class="mobile-nav-toggle" @click="toggleModal" />
   </nav>
 </template>
 
@@ -135,6 +135,8 @@ export default {
   top: 15px;
   background-image: url('../assets/icons/list.svg');
   background-size: 32px 32px;
+  border: none;
+  background-color: transparent;
 }
 
 .navbar-mobile .mobile-nav-toggle {

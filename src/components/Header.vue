@@ -9,6 +9,7 @@
         Voronezh
       </h2>
       <Navbar />
+      <SocialLinks />
     </div>
   </header>
 </template>
@@ -48,6 +49,7 @@
   font-size: 24px;
   margin-top: 20px;
   color: rgba(255, 255, 255, 0.8);
+  font-weight: 500;
 }
 
 .profession {
@@ -58,13 +60,13 @@
 
 .header-top {
   height: 80px;
-  position: fixed;
   left: 0;
   top: 0;
   right: 0;
   background: rgba(0, 0, 0, 0.9);
 }
 
+.header-top .social-links,
 .header-top .subtitle {
   display: none;
 }
@@ -105,7 +107,6 @@
   }
 
   .subtitle {
-    font-size: 26px;
     line-height: 50px;
     text-align: center;
   }
