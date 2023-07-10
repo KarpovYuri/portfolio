@@ -1,6 +1,7 @@
 :root {
   --main-bg-color: #040404;
-  --main-color: #fff;
+  --main-color: #ffffff;
+  --second-color: #aaaaaa;
   --accent-color: #be264c;
-  ;
+  --border-color: #666666;
 }

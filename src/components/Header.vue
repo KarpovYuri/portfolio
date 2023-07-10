@@ -2,11 +2,10 @@
   <header class="header" :class="{ 'header-top': $route.path !== '/' }">
     <div class="container">
       <h1 class="title">
-        <NuxtLink class="link" to="/">Karpov Yuri</NuxtLink>
+        <NuxtLink class="link" to="/">Карпов Юрий</NuxtLink>
       </h1>
       <h2 class="subtitle">
-        I'm a beginner <span class="profession">Web developer</span> from
-        Voronezh
+        Я <span class="profession">Web разработчик</span> из Воронежа
       </h2>
       <Navbar />
       <SocialLinks />
@@ -35,7 +34,7 @@
   padding: 0;
   line-height: 1;
   font-weight: 700;
-  font-family: 'Poppins', sans-serif;
+  font-family: 'Montserrat', sans-serif;
 }
 
 .link,
@@ -109,6 +108,7 @@
   .subtitle {
     line-height: 50px;
     text-align: center;
+    max-width: 280px;
   }
 
   .container {

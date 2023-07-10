@@ -1,5 +1,6 @@
 // https://nuxt.com/docs/api/configuration/nuxt-config
 export default defineNuxtConfig({
+  telemetry: false,
   srcDir: 'src/',
   modules: ['@nuxtjs/eslint-module', '@nuxtjs/google-fonts'],
   eslint: {
@@ -23,14 +24,15 @@ export default defineNuxtConfig({
   },
   googleFonts: {
     families: {
-      Poppins: {
-        wght: [400]
-      },
-      Roboto: {
-        wght: [700]
+      Montserrat: {
+        wght: [400, 500, 700]
       },
       Raleway: {
-        wght: [500]
+        wght: [500, 700]
+      },
+      'Open Sans': {
+        wght: [400, 700],
+        ital: [400]
       }
     }
   }

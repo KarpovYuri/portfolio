@@ -2,26 +2,26 @@
   <nav class="navbar" :class="{ 'navbar-mobile': showModal }">
     <ul class="nav-links">
       <li class="nav-link">
-        <NuxtLink class="link" to="/" @click="closeModal"> Home </NuxtLink>
+        <NuxtLink class="link" to="/" @click="closeModal"> Главная </NuxtLink>
       </li>
       <li class="nav-link">
         <NuxtLink class="link" to="/about" @click="closeModal">
-          About
+          Обо мне
         </NuxtLink>
       </li>
       <li class="nav-link">
         <NuxtLink class="link" to="/resume" @click="closeModal">
-          Resume
+          Резюме
         </NuxtLink>
       </li>
       <li class="nav-link">
         <NuxtLink class="link" to="/portfolio" @click="closeModal">
-          Portfolio
+          Портфолио
         </NuxtLink>
       </li>
       <li class="nav-link">
         <NuxtLink class="link" to="/contact" @click="closeModal">
-          Contact
+          Контакты
         </NuxtLink>
       </li>
     </ul>
@@ -89,7 +89,7 @@ export default {
   align-items: center;
   justify-content: space-between;
   padding: 0;
-  font-family: 'Poppins', sans-serif;
+  font-family: 'Montserrat', sans-serif;
   font-size: 16px;
   font-weight: 400;
   color: rgba(255, 255, 255, 0.7);
