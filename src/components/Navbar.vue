@@ -52,7 +52,7 @@ export default {
     updateWidth() {
       if (process.client) {
         this.width = window.innerWidth;
-        if (this.width > 768) {
+        if (this.width > 992) {
           this.showModal = false;
         }
       }
@@ -143,7 +143,10 @@ export default {
   background-image: url('../assets/icons/x.svg');
 }
 
-@media (max-width: 768px) {
+@media (max-width: 992px) {
+  .navbar {
+    margin-top: 0;
+  }
   .mobile-nav-toggle {
     display: block;
   }

@@ -5,7 +5,7 @@
         <NuxtLink class="link" to="/">Карпов Юрий</NuxtLink>
       </h1>
       <h2 class="subtitle">
-        Я <span class="profession">Web разработчик</span> из Воронежа
+        <span class="profession">Web разработчик</span> из Воронежа
       </h2>
       <Navbar />
       <SocialLinks />
@@ -90,17 +90,6 @@
 }
 
 @media (max-width: 992px) {
-  .title {
-    font-size: 36px;
-  }
-
-  .subtitle {
-    font-size: 20px;
-    line-height: 30px;
-  }
-}
-
-@media (max-width: 768px) {
   .header-top {
     height: 60px;
   }
@@ -108,11 +97,28 @@
   .subtitle {
     line-height: 50px;
     text-align: center;
-    max-width: 280px;
+    max-width: 290px;
   }
 
   .container {
     align-items: center;
+  }
+}
+
+@media (max-width: 576px) {
+  .header-top .title {
+    font-size: 26px;
+    padding-left: 20px;
+  }
+
+  .title {
+    font-size: 32px;
+  }
+
+  .subtitle {
+    line-height: 40px;
+    max-width: 240px;
+    font-size: 20px;
   }
 }
 </style>

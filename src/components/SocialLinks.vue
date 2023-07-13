@@ -76,10 +76,4 @@
 .instagram {
   background-image: url('../assets/icons/instagram.svg');
 }
-
-@media (max-width: 992px) {
-  .social-links {
-    margin-top: 15px;
-  }
-}
 </style>
