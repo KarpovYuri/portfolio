@@ -9,8 +9,7 @@ body {
 body::before {
   content: '';
   position: fixed;
-  background: var(--main-bg-color) url('./assets/img/bg.jpg') top right
-    no-repeat;
+  background: var(--main-bg-color) url('./assets/img/bg.jpg') top left no-repeat;
   background-size: cover;
   left: 0;
   right: 0;
@@ -110,10 +109,6 @@ section {
   .container {
     max-width: 720px;
   }
-
-  .subtitle {
-    font-size: 30px;
-  }
 }
 
 @media (min-width: 992px) {
@@ -131,6 +126,12 @@ section {
 @media (min-width: 1400px) {
   .container {
     max-width: 1320px;
+  }
+}
+
+@media (max-width: 768px) {
+  .subtitle {
+    font-size: 30px;
   }
 }
 

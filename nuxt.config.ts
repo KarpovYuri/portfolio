@@ -33,6 +33,9 @@ export default defineNuxtConfig({
       'Open Sans': {
         wght: [400, 700],
         ital: [400]
+      },
+      Poppins: {
+        wght: [600]
       }
     }
   }
