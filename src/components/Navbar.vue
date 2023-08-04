@@ -1,27 +1,9 @@
 <template>
   <nav class="navbar" :class="{ 'navbar-mobile': showModal }">
     <ul class="nav-links">
-      <li class="nav-link">
-        <NuxtLink class="link" to="/" @click="closeModal"> Главная </NuxtLink>
-      </li>
-      <li class="nav-link">
-        <NuxtLink class="link" to="/about" @click="closeModal">
-          Обо мне
-        </NuxtLink>
-      </li>
-      <li class="nav-link">
-        <NuxtLink class="link" to="/resume" @click="closeModal">
-          Резюме
-        </NuxtLink>
-      </li>
-      <li class="nav-link">
-        <NuxtLink class="link" to="/portfolio" @click="closeModal">
-          Портфолио
-        </NuxtLink>
-      </li>
-      <li class="nav-link">
-        <NuxtLink class="link" to="/contact" @click="closeModal">
-          Контакты
+      <li v-for="(link, key) in links" :key="key" class="nav-link">
+        <NuxtLink class="link" :to="link.url" @click="closeModal">
+          {{ link.linkName }}
         </NuxtLink>
       </li>
     </ul>
@@ -33,6 +15,13 @@
 export default {
   data() {
     return {
+      links: [
+        { url: '/', linkName: 'Главная' },
+        { url: '/about', linkName: 'Обо мне' },
+        { url: '/resume', linkName: 'Резюме' },
+        { url: '/portfolio', linkName: 'Портфолио' },
+        { url: '/contact', linkName: 'Контакты' }
+      ],
       width: 0,
       showModal: false
     };
