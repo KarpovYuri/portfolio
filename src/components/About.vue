@@ -10,7 +10,7 @@
         <h3 class="content-title">{{ contentTitle }}</h3>
         <p class="content-description">{{ contentDesc1 }}</p>
         <div class="wrapper">
-          <ul v-for="ul in uls" :key="ul.id" class="list">
+          <ul v-for="(ul, index) in uls" :key="index" class="list">
             <li v-for="item in ul.field" :key="item.id" class="list-item">
               <strong>{{ item.field }}</strong>
               <span>{{ item.value }}</span>
@@ -35,15 +35,12 @@ export default {
       { field: 'Город:', value: 'Воронеж, Россия', id: 4 }
     ]);
     const list2 = ref([
-      { field: 'Возраст:', value: '31', id: 1 },
-      { field: 'GitHub:', value: 'github.com/KarpovYuri', id: 2 },
-      { field: 'Email:', value: 'yurick@bk.ru', id: 3 },
-      { field: 'Freelance:', value: 'Возможен', id: 4 }
+      { field: 'Возраст:', value: '31', id: 5 },
+      { field: 'GitHub:', value: 'github.com/KarpovYuri', id: 6 },
+      { field: 'Email:', value: 'yurick@bk.ru', id: 7 },
+      { field: 'Freelance:', value: 'Возможен', id: 8 }
     ]);
-    const uls = ref([
-      { field: list1, id: 1 },
-      { field: list2, id: 2 }
-    ]);
+    const uls = ref([{ field: list1 }, { field: list2 }]);
     return { uls, list1, list2 };
   },
   data() {

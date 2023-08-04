@@ -2,16 +2,29 @@
   <header class="header" :class="{ 'header-top': $route.path !== '/' }">
     <div class="container">
       <h1 class="title">
-        <NuxtLink class="link" to="/">Карпов Юрий</NuxtLink>
+        <NuxtLink class="link" to="/">{{ title }}</NuxtLink>
       </h1>
       <h2 class="subtitle">
-        <span class="profession">Web разработчик</span> из Воронежа
+        <span class="profession">{{ subtitleProfession }}</span>
+        {{ subtitleCity }}
       </h2>
       <Navbar />
       <SocialLinks />
     </div>
   </header>
 </template>
+
+<script lang="ts">
+export default {
+  data() {
+    return {
+      title: 'Карпов Юрий',
+      subtitleProfession: 'Web разработчик',
+      subtitleCity: ' из Воронежа'
+    };
+  }
+};
+</script>
 
 <style scoped>
 .header {
