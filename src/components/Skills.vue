@@ -6,52 +6,28 @@
         <div class="progress">
           <span class="skill">HTML<i class="skill-value">95%</i> </span>
           <div class="progress-bar-wrap">
-            <div
-              class="progress-bar"
-              role="progressbar"
-              aria-valuenow="95"
-              aria-valuemin="0"
-              aria-valuemax="100"
-            />
+            <div class="progress-bar" />
           </div>
         </div>
 
         <div class="progress">
           <span class="skill">CSS<i class="skill-value">85%</i></span>
           <div class="progress-bar-wrap">
-            <div
-              class="progress-bar"
-              role="progressbar"
-              aria-valuenow="85"
-              aria-valuemin="0"
-              aria-valuemax="100"
-            />
+            <div class="progress-bar" />
           </div>
         </div>
 
         <div class="progress">
           <span class="skill">JavaScript<i class="skill-value">90%</i> </span>
           <div class="progress-bar-wrap">
-            <div
-              class="progress-bar"
-              role="progressbar"
-              aria-valuenow="90"
-              aria-valuemin="0"
-              aria-valuemax="100"
-            />
+            <div class="progress-bar" />
           </div>
         </div>
 
         <div class="progress">
           <span class="skill">TypeScript<i class="skill-value">60%</i> </span>
           <div class="progress-bar-wrap">
-            <div
-              class="progress-bar"
-              role="progressbar"
-              aria-valuenow="60"
-              aria-valuemin="0"
-              aria-valuemax="100"
-            />
+            <div class="progress-bar" />
           </div>
         </div>
       </div>
@@ -62,13 +38,7 @@
             React / Redux<i class="skill-value">80%</i>
           </span>
           <div class="progress-bar-wrap">
-            <div
-              class="progress-bar"
-              role="progressbar"
-              aria-valuenow="80"
-              aria-valuemin="0"
-              aria-valuemax="100"
-            />
+            <div class="progress-bar" />
           </div>
         </div>
 
@@ -77,45 +47,34 @@
             Vue / Nuxt / Vuex<i class="skill-value">60%</i>
           </span>
           <div class="progress-bar-wrap">
-            <div
-              class="progress-bar"
-              role="progressbar"
-              aria-valuenow="60"
-              aria-valuemin="0"
-              aria-valuemax="100"
-            />
+            <div class="progress-bar" />
           </div>
         </div>
 
-        <div class="progress">
+        <div ref="progress" class="progress">
           <span class="skill">Node JS<i class="skill-value">75%</i></span>
           <div class="progress-bar-wrap">
-            <div
-              class="progress-bar"
-              role="progressbar"
-              aria-valuenow="75"
-              aria-valuemin="0"
-              aria-valuemax="100"
-            />
+            <div class="progress-bar" />
           </div>
         </div>
 
-        <div class="progress">
+        <div ref="progress" class="progress">
           <span class="skill">MongoDB<i class="skill-value">65%</i></span>
           <div class="progress-bar-wrap">
-            <div
-              class="progress-bar"
-              role="progressbar"
-              aria-valuenow="65"
-              aria-valuemin="0"
-              aria-valuemax="100"
-            />
+            <div class="progress-bar" />
           </div>
         </div>
       </div>
     </div>
   </div>
 </template>
+
+<script lang="ts" setup>
+import { ref, onMounted } from 'vue';
+const progress = ref([]);
+onMounted(() => progress.value);
+</script>
+
 <style scoped>
 .container {
   background: rgba(0, 0, 0, 0.9);
@@ -133,7 +92,7 @@
   min-height: 60px;
 }
 
-.progress .skill {
+.skill {
   padding: 10px 0;
   text-transform: uppercase;
   display: block;

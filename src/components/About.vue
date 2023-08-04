@@ -1,64 +1,64 @@
 <template>
   <div class="container">
-    <h2 class="page-title">Обо мне</h2>
-    <p class="subtitle">Узнайте больше обо мне</p>
+    <h2 class="page-title">{{ title }}</h2>
+    <p class="subtitle">{{ subtitle }}</p>
     <div class="wrapper">
       <div class="img-wrapper">
         <img src="../assets/img/me.png" class="img-fluid" alt="Фотография" />
       </div>
       <div class="content">
-        <h3 class="content-title">Frontend &amp; Backend разработчик</h3>
-        <p class="content-description">
-          Закончил онлайн-курсы по HTML / CSS / Java Script / Type Script /
-          Node.js / React и самостоятельно изучил Vue / Nuxt.
-        </p>
+        <h3 class="content-title">{{ contentTitle }}</h3>
+        <p class="content-description">{{ contentDesc1 }}</p>
         <div class="wrapper">
-          <ul class="list">
-            <li class="list-item">
-              <strong>Дата рождения:</strong>
-              <span>28 Июня 1978</span>
-            </li>
-            <li class="list-item">
-              <strong>Сайт:</strong>
-              <span>www.karaudio.ru</span>
-            </li>
-            <li class="list-item">
-              <strong>Телефон:</strong>
-              <span>+7 915 545 9396</span>
-            </li>
-            <li class="list-item">
-              <strong>Город:</strong>
-              <span>Воронеж, Россия</span>
-            </li>
-          </ul>
-          <ul class="list">
-            <li class="list-item">
-              <strong>Возраст:</strong>
-              <span>45</span>
-            </li>
-            <li class="list-item">
-              <strong>GitHub:</strong>
-              <span>github.com/KarpovYuri</span>
-            </li>
-            <li class="list-item">
-              <strong>Email:</strong>
-              <span>yurick@bk.ru</span>
-            </li>
-            <li class="list-item">
-              <strong>Freelance:</strong>
-              <span>Возможен</span>
+          <ul v-for="ul in uls" :key="ul.id" class="list">
+            <li v-for="item in ul.field" :key="item.id" class="list-item">
+              <strong>{{ item.field }}</strong>
+              <span>{{ item.value }}</span>
             </li>
           </ul>
         </div>
-        <p class="content-description">
-          Рассматриваю смену профессии в сторону Frontend или Backend -
-          разработки. Ищу возможность применить знания на практике. Готов
-          выполнить тестовое задание, чтобы продемонстрировать уровень навыков.
-        </p>
+        <p class="content-description">{{ contentDesc2 }}</p>
       </div>
     </div>
   </div>
 </template>
+
+<script lang="ts">
+import { ref } from 'vue';
+
+export default {
+  setup() {
+    const list1 = ref([
+      { field: 'Дата рождения:', value: '28 Июня 1992', id: 1 },
+      { field: 'Сайт:', value: 'www.karaudio.ru', id: 2 },
+      { field: 'Телефон:', value: '+7 915 545 9396', id: 3 },
+      { field: 'Город:', value: 'Воронеж, Россия', id: 4 }
+    ]);
+    const list2 = ref([
+      { field: 'Возраст:', value: '31', id: 1 },
+      { field: 'GitHub:', value: 'github.com/KarpovYuri', id: 2 },
+      { field: 'Email:', value: 'yurick@bk.ru', id: 3 },
+      { field: 'Freelance:', value: 'Возможен', id: 4 }
+    ]);
+    const uls = ref([
+      { field: list1, id: 1 },
+      { field: list2, id: 2 }
+    ]);
+    return { uls, list1, list2 };
+  },
+  data() {
+    return {
+      title: 'Обо мне',
+      subtitle: 'Узнайте больше обо мне',
+      contentTitle: 'Frontend &amp; Backend разработчик',
+      contentDesc1:
+        'Закончил онлайн-курсы по HTML / CSS / Java Script / Type Script / Node.js / React и самостоятельно изучил Vue / Nuxt.',
+      contentDesc2:
+        'Рассматриваю смену профессии в сторону Frontend или Backend - разработки. Ищу возможность применить знания на практике. Готов выполнить тестовое задание, чтобы продемонстрировать уровень навыков.'
+    };
+  }
+};
+</script>
 
 <style scoped>
 .wrapper {
