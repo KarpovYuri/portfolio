@@ -1,67 +1,15 @@
 <template>
   <div class="container">
-    <h2 class="page-title">Мой стек</h2>
+    <h2 class="page-title">{{ title }}</h2>
     <div class="skills-content">
-      <div class="skills-column">
-        <div class="progress">
-          <span class="skill">HTML<i class="skill-value">95%</i> </span>
-          <div class="progress-bar-wrap">
-            <div class="progress-bar" />
-          </div>
-        </div>
-
-        <div class="progress">
-          <span class="skill">CSS<i class="skill-value">85%</i></span>
-          <div class="progress-bar-wrap">
-            <div class="progress-bar" />
-          </div>
-        </div>
-
-        <div class="progress">
-          <span class="skill">JavaScript<i class="skill-value">90%</i> </span>
-          <div class="progress-bar-wrap">
-            <div class="progress-bar" />
-          </div>
-        </div>
-
-        <div class="progress">
-          <span class="skill">TypeScript<i class="skill-value">60%</i> </span>
-          <div class="progress-bar-wrap">
-            <div class="progress-bar" />
-          </div>
-        </div>
-      </div>
-
-      <div class="skills-column">
-        <div class="progress">
+      <div v-for="(list, index) in lists" :key="index" class="skills-column">
+        <div v-for="(skill, key) in list.field" :key="key" class="progress">
           <span class="skill">
-            React / Redux<i class="skill-value">80%</i>
+            {{ skill.skillName }}
+            <i class="skill-value">{{ skill.value }}</i>
           </span>
           <div class="progress-bar-wrap">
-            <div class="progress-bar" />
-          </div>
-        </div>
-
-        <div class="progress">
-          <span class="skill">
-            Vue / Nuxt / Vuex<i class="skill-value">60%</i>
-          </span>
-          <div class="progress-bar-wrap">
-            <div class="progress-bar" />
-          </div>
-        </div>
-
-        <div ref="progress" class="progress">
-          <span class="skill">Node JS<i class="skill-value">75%</i></span>
-          <div class="progress-bar-wrap">
-            <div class="progress-bar" />
-          </div>
-        </div>
-
-        <div ref="progress" class="progress">
-          <span class="skill">MongoDB<i class="skill-value">65%</i></span>
-          <div class="progress-bar-wrap">
-            <div class="progress-bar" />
+            <div class="progress-bar" :style="'width:' + skill.value" />
           </div>
         </div>
       </div>
@@ -69,11 +17,37 @@
   </div>
 </template>
 
-<script lang="ts" setup>
+<script lang="ts">
+export default {
+  setup() {
+    const list1 = ref([
+      { skillName: 'HTML', value: '95%' },
+      { skillName: 'CSS', value: '85%' },
+      { skillName: 'JavaScript', value: '90%' },
+      { skillName: 'TypeScript', value: '60%' }
+    ]);
+    const list2 = ref([
+      { skillName: 'React / Redux', value: '80%' },
+      { skillName: 'Vue / Nuxt / Vuex', value: '60%' },
+      { skillName: 'Node JS', value: '75%' },
+      { skillName: 'MongoDB', value: '65%' }
+    ]);
+    const lists = ref([{ field: list1 }, { field: list2 }]);
+    return { lists, list1, list2 };
+  },
+  data() {
+    return {
+      title: 'Мой стек'
+    };
+  }
+};
+</script>
+
+<!-- <script lang="ts" setup>
 import { ref, onMounted } from 'vue';
 const progress = ref([]);
 onMounted(() => progress.value);
-</script>
+</script> -->
 
 <style scoped>
 .container {

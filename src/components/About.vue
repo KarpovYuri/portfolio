@@ -11,7 +11,7 @@
         <p class="content-description">{{ contentDesc1 }}</p>
         <div class="wrapper">
           <ul v-for="(ul, index) in uls" :key="index" class="list">
-            <li v-for="item in ul.field" :key="item.id" class="list-item">
+            <li v-for="(item, key) in ul.field" :key="key" class="list-item">
               <strong>{{ item.field }}</strong>
               <span>{{ item.value }}</span>
             </li>
@@ -24,21 +24,19 @@
 </template>
 
 <script lang="ts">
-import { ref } from 'vue';
-
 export default {
   setup() {
     const list1 = ref([
-      { field: 'Дата рождения:', value: '28 Июня 1992', id: 1 },
-      { field: 'Сайт:', value: 'www.karaudio.ru', id: 2 },
-      { field: 'Телефон:', value: '+7 915 545 9396', id: 3 },
-      { field: 'Город:', value: 'Воронеж, Россия', id: 4 }
+      { field: 'Дата рождения:', value: '28 Июня 1992' },
+      { field: 'Сайт:', value: 'www.karaudio.ru' },
+      { field: 'Телефон:', value: '+7 915 545 9396' },
+      { field: 'Город:', value: 'Воронеж, Россия' }
     ]);
     const list2 = ref([
       { field: 'Возраст:', value: '31', id: 5 },
-      { field: 'GitHub:', value: 'github.com/KarpovYuri', id: 6 },
-      { field: 'Email:', value: 'yurick@bk.ru', id: 7 },
-      { field: 'Freelance:', value: 'Возможен', id: 8 }
+      { field: 'GitHub:', value: 'github.com/KarpovYuri' },
+      { field: 'Email:', value: 'yurick@bk.ru' },
+      { field: 'Freelance:', value: 'Возможен' }
     ]);
     const uls = ref([{ field: list1 }, { field: list2 }]);
     return { uls, list1, list2 };
