@@ -1,27 +1,43 @@
 <template>
   <div class="social-links">
-    <NuxtLink href="https://github.com/KarpovYuri" class="link" target="blank">
-      <button class="social-icon github" />
-    </NuxtLink>
     <NuxtLink
-      href="https://www.linkedin.com/in/karpov-yuri/"
+      v-for="(link, key) in links"
+      :key="key"
+      :href="link.url"
       class="link"
       target="blank"
     >
-      <button class="social-icon linkedin" />
-    </NuxtLink>
-    <NuxtLink href="https://vk.com/karpov_yn" class="link" target="blank">
-      <button class="social-icon vk" />
-    </NuxtLink>
-    <NuxtLink
-      href="https://www.facebook.com/profile.php?id=100000459328645"
-      class="link"
-      target="blank"
-    >
-      <button class="social-icon facebook" />
+      <button :class="'social-icon ' + link.class" />
     </NuxtLink>
   </div>
 </template>
+
+<script lang="ts">
+export default {
+  data() {
+    return {
+      links: [
+        {
+          url: 'https://github.com/KarpovYuri',
+          class: 'github'
+        },
+        {
+          url: 'https://www.linkedin.com/in/karpov-yuri/',
+          class: 'linkedin'
+        },
+        {
+          url: 'https://vk.com/karpov_yn',
+          class: 'vk'
+        },
+        {
+          url: 'https://www.facebook.com/profile.php?id=100000459328645',
+          class: 'facebook'
+        }
+      ]
+    };
+  }
+};
+</script>
 
 <style scoped>
 .social-links {
