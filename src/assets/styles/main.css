@@ -42,7 +42,7 @@ section {
   overflow: hidden;
   position: absolute;
   width: 100%;
-  animation: ani 0.75s forwards;
+  animation: ani-mobile 0.75s forwards;
   z-index: 2;
 }
 
@@ -55,6 +55,21 @@ section {
 
   100% {
     top: 100px;
+    bottom: auto;
+    opacity: 1;
+    padding-bottom: 45px;
+  }
+}
+
+@keyframes ani-mobile {
+  0% {
+    top: 240px;
+    bottom: 100%;
+    opacity: 0;
+  }
+
+  100% {
+    top: 80px;
     bottom: auto;
     opacity: 1;
     padding-bottom: 45px;
@@ -115,6 +130,10 @@ section {
 @media (min-width: 992px) {
   .container {
     max-width: 960px;
+  }
+
+  section {
+    animation: ani 0.75s forwards;
   }
 }
 
