@@ -27,7 +27,7 @@
 export default {
   setup() {
     const list1 = ref([
-      { field: 'Дата рождения:', value: '28 Июня 1991' },
+      { field: 'Дата рождения:', value: '28 Июня 1993' },
       { field: 'Сайт:', value: 'www.karaudio.ru' },
       { field: 'Телефон:', value: '+7 915 545 9396' },
       { field: 'Город:', value: 'Воронеж, Россия' }

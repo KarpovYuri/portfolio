@@ -48,7 +48,7 @@ section {
 
 @keyframes ani {
   0% {
-    top: 140px;
+    top: 340px;
     bottom: 100%;
     opacity: 0;
   }

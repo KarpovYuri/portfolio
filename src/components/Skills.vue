@@ -6,10 +6,14 @@
         <div v-for="(skill, key) in list.field" :key="key" class="progress">
           <span class="skill">
             {{ skill.skillName }}
-            <i class="skill-value">{{ skill.value }}</i>
+            <i class="skill-value">{{ skill.value }}%</i>
           </span>
           <div class="progress-bar-wrap">
-            <div class="progress-bar" :style="'width:' + skill.value" />
+            <div
+              ref="progress"
+              class="progress-bar"
+              :style="'width:' + skill.startValue + '%'"
+            />
           </div>
         </div>
       </div>
@@ -21,18 +25,26 @@
 export default {
   setup() {
     const list1 = ref([
-      { skillName: 'HTML', value: '95%' },
-      { skillName: 'CSS', value: '85%' },
-      { skillName: 'JavaScript', value: '90%' },
-      { skillName: 'TypeScript', value: '60%' }
+      { skillName: 'HTML', startValue: 0, value: 95 },
+      { skillName: 'CSS', startValue: 0, value: 85 },
+      { skillName: 'JavaScript', startValue: 0, value: 90 },
+      { skillName: 'TypeScript', startValue: 0, value: 60 }
     ]);
     const list2 = ref([
-      { skillName: 'React / Redux', value: '80%' },
-      { skillName: 'Vue / Nuxt / Vuex', value: '60%' },
-      { skillName: 'Node JS', value: '75%' },
-      { skillName: 'MongoDB', value: '65%' }
+      { skillName: 'React / Redux', startValue: 0, value: 80 },
+      { skillName: 'Vue / Nuxt / Vuex', startValue: 0, value: 60 },
+      { skillName: 'Node JS', startValue: 0, value: 75 },
+      { skillName: 'MongoDB', startValue: 0, value: 65 }
     ]);
     const lists = ref([{ field: list1 }, { field: list2 }]);
+    setTimeout(() => {
+      list1.value.forEach((element) => {
+        element.startValue = element.value;
+      });
+      list2.value.forEach((element) => {
+        element.startValue = element.value;
+      });
+    }, 75);
     return { lists, list1, list2 };
   },
   data() {
@@ -42,12 +54,6 @@ export default {
   }
 };
 </script>
-
-<!-- <script lang="ts" setup>
-import { ref, onMounted } from 'vue';
-const progress = ref([]);
-onMounted(() => progress.value);
-</script> -->
 
 <style scoped>
 .container {
@@ -87,7 +93,7 @@ onMounted(() => progress.value);
 .progress-bar {
   width: 1px;
   height: 10px;
-  transition: 0.9s;
+  transition: 1s;
   background-color: var(--accent-color);
 }
 
