@@ -27,13 +27,13 @@
 export default {
   setup() {
     const list1 = ref([
-      { field: 'Дата рождения:', value: '28 Июня 1992' },
+      { field: 'Дата рождения:', value: '28 Июня 1991' },
       { field: 'Сайт:', value: 'www.karaudio.ru' },
       { field: 'Телефон:', value: '+7 915 545 9396' },
       { field: 'Город:', value: 'Воронеж, Россия' }
     ]);
     const list2 = ref([
-      { field: 'Возраст:', value: '31', id: 5 },
+      { field: 'Возраст:', value: '30' },
       { field: 'GitHub:', value: 'github.com/KarpovYuri' },
       { field: 'Email:', value: 'yurick@bk.ru' },
       { field: 'Freelance:', value: 'Возможен' }
@@ -45,7 +45,7 @@ export default {
     return {
       title: 'Обо мне',
       subtitle: 'Узнайте больше обо мне',
-      contentTitle: 'Frontend &amp; Backend разработчик',
+      contentTitle: 'Frontend & Backend разработчик',
       contentDesc1:
         'Закончил онлайн-курсы по HTML / CSS / Java Script / Type Script / Node.js / React и самостоятельно изучил Vue / Nuxt.',
       contentDesc2:
@@ -75,7 +75,7 @@ export default {
 }
 
 .container {
-  background: rgba(0, 0, 0, 0.9);
+  background: var(--background-color);
   padding: 30px;
 }
 

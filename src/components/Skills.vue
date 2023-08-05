@@ -51,7 +51,7 @@ onMounted(() => progress.value);
 
 <style scoped>
 .container {
-  background: rgba(0, 0, 0, 0.9);
+  background: var(--background-color);
   padding: 30px;
 }
 .skills-content {
@@ -70,6 +70,7 @@ onMounted(() => progress.value);
   padding: 10px 0;
   text-transform: uppercase;
   display: block;
+  font-size: 14px;
   font-weight: 600;
   font-family: 'Poppins', sans-serif;
 }
@@ -88,5 +89,28 @@ onMounted(() => progress.value);
   height: 10px;
   transition: 0.9s;
   background-color: var(--accent-color);
+}
+
+@media (max-width: 768px) {
+  .skills-content {
+    flex-direction: column;
+    gap: 0;
+  }
+  .skills-column {
+    width: 100%;
+  }
+}
+
+@media (max-width: 576px) {
+  .skill {
+    font-size: 12px;
+    padding: 8px 0;
+  }
+  .progress {
+    min-height: 52px;
+  }
+  .progress-bar {
+    height: 8px;
+  }
 }
 </style>
