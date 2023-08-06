@@ -6,6 +6,7 @@
     <section>
       <About />
       <Skills />
+      <Tools />
     </section>
   </div>
 </template>

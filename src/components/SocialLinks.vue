@@ -74,19 +74,19 @@ export default {
   cursor: pointer;
 }
 .github {
-  background-image: url('../assets/icons/github.svg');
+  background-image: url('../assets/icons/socials/github.svg');
 }
 
 .vk {
-  background-image: url('../assets/icons/vk.svg');
+  background-image: url('../assets/icons/socials/vk.svg');
 }
 
 .facebook {
-  background-image: url('../assets/icons/facebook.svg');
+  background-image: url('../assets/icons/socials/facebook.svg');
 }
 
 .linkedin {
-  background-image: url('../assets/icons/linkedin.svg');
+  background-image: url('../assets/icons/socials/linkedin.svg');
 }
 
 .instagram {

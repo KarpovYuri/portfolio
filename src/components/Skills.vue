@@ -69,7 +69,7 @@ export default {
   gap: 24px;
 }
 .skills-column {
-  width: 50%;
+  width: calc(50% - 24px / 2);
 }
 
 .progress {
