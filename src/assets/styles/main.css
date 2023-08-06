@@ -98,7 +98,7 @@ section {
 
 .page-title::after {
   content: '';
-  width: 120px;
+  width: 50px;
   height: 1px;
   display: inline-block;
   background: var(--accent-color);
@@ -118,6 +118,9 @@ section {
 @media (min-width: 576px) {
   .container {
     max-width: 540px;
+  }
+  .page-title::after {
+    width: 120px;
   }
 }
 
