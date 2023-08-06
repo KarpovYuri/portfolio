@@ -119,4 +119,26 @@ export default {
 .webstorm {
   background-image: url('../assets/icons/tools/webstorm.svg');
 }
+
+@media (max-width: 992px) {
+  .tools-column {
+    width: calc(100% / 3 - 24px * 2 / 3);
+  }
+}
+
+@media (max-width: 768px) {
+  .tools-column {
+    width: calc(50% - 24px / 2);
+  }
+}
+
+@media (max-width: 576px) {
+  .tools-column {
+    width: 100%;
+  }
+
+  .tool-box {
+    justify-content: center;
+  }
+}
 </style>
