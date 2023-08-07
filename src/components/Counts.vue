@@ -94,4 +94,22 @@ export default {
 .awards {
   background-image: url('../assets/icons/counts/awards.svg');
 }
+
+@media (max-width: 992px) {
+  .counts-content {
+    row-gap: 48px;
+  }
+  .counts-column {
+    width: calc(50% - 24px / 2);
+  }
+}
+
+@media (max-width: 576px) {
+  .counts-content {
+    gap: 48px;
+  }
+  .counts-column {
+    width: 100%;
+  }
+}
 </style>
