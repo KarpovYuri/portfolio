@@ -1,8 +1,9 @@
 :root {
-  --main-bg-color: #040404;
   --main-color: #ffffff;
   --second-color: #aaaaaa;
   --accent-color: #be264c;
   --border-color: #666666;
-  --background-color: rgba(0, 0, 0, 0.5);
+  --main-bg-color: #040404;
+  --second-bg-color: rgba(0, 0, 0, 0.5);
+  --accent-second-color: rgba(255, 255, 255, 0.08);
 }

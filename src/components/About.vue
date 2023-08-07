@@ -75,7 +75,7 @@ export default {
 }
 
 .container {
-  background: var(--background-color);
+  background: var(--second-bg-color);
   padding: 30px;
 }
 

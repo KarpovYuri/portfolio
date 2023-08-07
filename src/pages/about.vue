@@ -5,6 +5,7 @@
     </Head>
     <section>
       <About />
+      <Counts />
       <Skills />
       <Tools />
     </section>

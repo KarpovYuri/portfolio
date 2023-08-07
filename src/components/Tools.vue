@@ -38,7 +38,7 @@ export default {
 
 <style scoped>
 .container {
-  background: var(--background-color);
+  background: var(--second-bg-color);
   padding: 30px;
 }
 
@@ -56,7 +56,7 @@ export default {
   gap: 10px;
   align-items: center;
   padding: 20px;
-  background: rgba(255, 255, 255, 0.08);
+  background: var(--accent-second-color);
   transition: ease-in-out 0.3s;
 }
 
