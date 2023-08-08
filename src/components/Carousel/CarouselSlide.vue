@@ -17,19 +17,6 @@ export default {
 </script>
 
 <style scoped>
-.slide-img {
-  width: 100%;
-  height: calc(
-    (
-        var(--container-xxl) - var(--carousel-gap) *
-          (var(--carousel-columns) - 1) - var(--container-padding) * 2
-      ) / var(--carousel-columns) * var(--image-ratio)
-  );
-  border-radius: 6px;
-  object-fit: contain;
-  box-sizing: border-box;
-}
-
 .slide-logo {
   width: 90px;
   border-radius: 50%;
@@ -49,13 +36,63 @@ export default {
   margin: 0 0 0 45px;
 }
 
+.slide-img {
+  width: 100%;
+  height: calc(
+    (100vw - var(--container-padding) * 2) * var(--carousel-image-ratio)
+  );
+  border-radius: 12px;
+  object-fit: contain;
+  box-sizing: border-box;
+}
+
+@media (min-width: 576px) {
+  .slide-img {
+    height: calc(
+      (var(--container-sm) - var(--container-padding) * 2) *
+        var(--carousel-image-ratio)
+    );
+  }
+}
+
+@media (min-width: 768px) {
+  .slide-img {
+    height: calc(
+      (var(--container-md) - var(--container-padding) * 2 - var(--carousel-gap)) /
+        2 * var(--carousel-image-ratio)
+    );
+  }
+}
+
+@media (min-width: 992px) {
+  .slide-img {
+    height: calc(
+      (
+          var(--container-lg) - var(--container-padding) * 2 -
+            var(--carousel-gap) * 2
+        ) / 3 * var(--carousel-image-ratio)
+    );
+  }
+}
+
+@media (min-width: 1200px) {
+  .slide-img {
+    height: calc(
+      (
+          var(--container-xl) - var(--container-padding) * 2 -
+            var(--carousel-gap) * 2
+        ) / 3 * var(--carousel-image-ratio)
+    );
+  }
+}
+
 @media (min-width: 1400px) {
   .slide-img {
     height: calc(
       (
           var(--container-xxl) - var(--container-padding) * 2 -
-            var(--carousel-gap) * (var(--carousel-columns) - 1)
-        ) / var(--carousel-columns) * var(--image-ratio)
+            var(--carousel-gap) * 2
+        ) / 3 * var(--carousel-image-ratio)
     );
   }
 }

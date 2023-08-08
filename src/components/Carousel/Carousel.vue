@@ -33,10 +33,21 @@ export default {
 
 .carousel-slide {
   flex-shrink: 0;
-  width: calc(
-    100% / var(--carousel-columns) - var(--carousel-gap) *
-      (var(--carousel-columns) - 1) / var(--carousel-columns)
-  );
+  width: 100%;
   transition-property: transform;
+}
+
+@media (min-width: 768px) {
+  .carousel-slide {
+    width: calc((100% - var(--carousel-gap)) / 2);
+  }
+}
+
+@media (min-width: 992px) {
+  .carousel-slide {
+    flex-shrink: 0;
+    width: calc((100% - var(--carousel-gap) * 2) / 3);
+    transition-property: transform;
+  }
 }
 </style>
