@@ -17,7 +17,8 @@ export default defineNuxtConfig({
   css: [
     '@/assets/styles/vendors/normalize.css',
     '@/assets/styles/main.css',
-    '@/assets/styles/color.css'
+    '@/assets/styles/color.css',
+    '@/assets/styles/variables.css'
   ],
   router: {
     options: {

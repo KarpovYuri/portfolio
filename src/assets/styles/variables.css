@@ -1,0 +1,8 @@
+:root {
+  --carousel-gap: 30px;
+  --carousel-columns: 3;
+  --container-padding: 30px;
+  --container-xxl: 1320px;
+  --container-xl: 1140px;
+  --image-ratio: calc(720 / 1018);
+}

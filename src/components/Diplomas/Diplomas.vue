@@ -1,0 +1,22 @@
+<template>
+  <div class="container">
+    <h2 class="page-title">{{ title }}</h2>
+    <Carousel :slides="slides" />
+  </div>
+</template>
+
+<script lang="ts">
+import { slides, title } from './data';
+export default {
+  data() {
+    return { slides, title };
+  }
+};
+</script>
+
+<style scoped>
+.container {
+  background: var(--second-bg-color);
+  padding: var(--container-padding);
+}
+</style>
