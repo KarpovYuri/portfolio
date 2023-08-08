@@ -8,6 +8,7 @@
       <Counts />
       <Skills />
       <Tools />
+      <Diplomas />
     </section>
   </div>
 </template>
