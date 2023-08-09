@@ -7,10 +7,11 @@
 
 <script lang="ts">
 export default {
+  name: 'CarouselSlide',
   props: {
     slide: {
       type: Object,
-      default: null
+      default: () => {}
     }
   }
 };

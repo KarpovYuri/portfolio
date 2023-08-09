@@ -8,6 +8,7 @@
 <script lang="ts">
 import { slides, title } from './data';
 export default {
+  name: 'Diplomas',
   data() {
     return { slides, title };
   }

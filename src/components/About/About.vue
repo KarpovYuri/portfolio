@@ -108,7 +108,7 @@ export default {
 }
 
 .list-item {
-  background: url(../assets/icons/chevron-right.svg) no-repeat 0 1px;
+  background: url(../../assets/icons/chevron-right.svg) no-repeat 0 1px;
   margin-bottom: 20px;
   display: flex;
   align-items: center;
