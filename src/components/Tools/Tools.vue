@@ -1,6 +1,6 @@
 <template>
   <div class="container">
-    <h2 class="page-title">{{ title }}</h2>
+    <PageTitle :title="title" />
     <div class="tools-content">
       <div v-for="(tool, key) in tools" :key="key" class="tools-column">
         <div class="tool-box">
@@ -13,10 +13,11 @@
 </template>
 
 <script lang="ts">
+import { title } from './data';
 export default {
   data() {
     return {
-      title: 'Мои инструменты',
+      title,
       tools: [
         { title: 'VScode', class: 'vscode' },
         { title: 'WebStorm', class: 'webstorm' },
@@ -79,45 +80,45 @@ export default {
 }
 
 .webpack {
-  background-image: url('../assets/icons/tools/webpack.svg');
+  background-image: url('../../assets/icons/tools/webpack.svg');
 }
 
 .vite {
-  background-image: url('../assets/icons/tools/vite.svg');
+  background-image: url('../../assets/icons/tools/vite.svg');
 }
 .git {
-  background-image: url('../assets/icons/tools/git.svg');
+  background-image: url('../../assets/icons/tools/git.svg');
 }
 .npm {
-  background-image: url('../assets/icons/tools/npm.svg');
+  background-image: url('../../assets/icons/tools/npm.svg');
 }
 .yarn {
-  background-image: url('../assets/icons/tools/yarn.svg');
+  background-image: url('../../assets/icons/tools/yarn.svg');
 }
 
 .vscode {
-  background-image: url('../assets/icons/tools/vscode.svg');
+  background-image: url('../../assets/icons/tools/vscode.svg');
 }
 
 .postman {
-  background-image: url('../assets/icons/tools/postman.svg');
+  background-image: url('../../assets/icons/tools/postman.svg');
 }
 
 .figma {
-  background-image: url('../assets/icons/tools/figma.svg');
+  background-image: url('../../assets/icons/tools/figma.svg');
 }
 .docker {
-  background-image: url('../assets/icons/tools/docker.svg');
+  background-image: url('../../assets/icons/tools/docker.svg');
 }
 .nginx {
-  background-image: url('../assets/icons/tools/nginx.svg');
+  background-image: url('../../assets/icons/tools/nginx.svg');
 }
 
 .joomla {
-  background-image: url('../assets/icons/tools/joomla.svg');
+  background-image: url('../../assets/icons/tools/joomla.svg');
 }
 .webstorm {
-  background-image: url('../assets/icons/tools/webstorm.svg');
+  background-image: url('../../assets/icons/tools/webstorm.svg');
 }
 
 @media (max-width: 992px) {

@@ -1,6 +1,6 @@
 <template>
   <div class="container">
-    <h2 class="page-title">{{ title }}</h2>
+    <PageTitle :title="title" />
     <div class="skills-content">
       <div v-for="(list, index) in lists" :key="index" class="skills-column">
         <div v-for="(skill, key) in list.field" :key="key" class="progress">
@@ -22,6 +22,7 @@
 </template>
 
 <script lang="ts">
+import { title } from './data';
 export default {
   setup() {
     const list1 = ref([
@@ -48,9 +49,7 @@ export default {
     return { lists, list1, list2 };
   },
   data() {
-    return {
-      title: 'Мой стек'
-    };
+    return { title };
   }
 };
 </script>

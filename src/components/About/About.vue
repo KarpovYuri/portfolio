@@ -1,10 +1,10 @@
 <template>
   <div class="container">
-    <h2 class="page-title">{{ title }}</h2>
+    <PageTitle :title="title" />
     <p class="subtitle">{{ subtitle }}</p>
     <div class="wrapper">
       <div class="img-wrapper">
-        <img src="../assets/img/me.png" class="img-fluid" alt="Фотография" />
+        <img src="../../assets/img/me.png" class="img-fluid" alt="Фотография" />
       </div>
       <div class="content">
         <h3 class="content-title">{{ contentTitle }}</h3>
@@ -24,6 +24,7 @@
 </template>
 
 <script lang="ts">
+import { title } from './data';
 export default {
   setup() {
     const list1 = ref([
@@ -43,7 +44,7 @@ export default {
   },
   data() {
     return {
-      title: 'Обо мне',
+      title,
       subtitle: 'Узнайте больше обо мне',
       contentTitle: 'Frontend & Backend разработчик',
       contentDesc1:

@@ -1,6 +1,6 @@
 <template>
   <div class="container">
-    <h2 class="page-title">{{ title }}</h2>
+    <PageTitle :title="title" />
     <Carousel :slides="slides" />
   </div>
 </template>

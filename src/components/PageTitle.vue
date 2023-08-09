@@ -1,0 +1,43 @@
+<template>
+  <h2 class="page-title">{{ title }}</h2>
+</template>
+
+<script lang="ts">
+export default {
+  props: {
+    title: {
+      type: String,
+      default: ''
+    }
+  }
+};
+</script>
+
+<style scoped>
+.page-title {
+  font-size: 14px;
+  font-weight: 500;
+  padding: 0;
+  line-height: 1px;
+  margin: 0 0 20px 0;
+  letter-spacing: 2px;
+  text-transform: uppercase;
+  color: var(--second-color);
+  font-family: 'Montserrat', sans-serif;
+}
+
+.page-title::after {
+  content: '';
+  width: 50px;
+  height: 1px;
+  display: inline-block;
+  background: var(--accent-color);
+  margin: 4px 10px;
+}
+
+@media (min-width: 576px) {
+  .page-title::after {
+    width: 120px;
+  }
+}
+</style>
