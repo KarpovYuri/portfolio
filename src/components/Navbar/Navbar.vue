@@ -12,16 +12,11 @@
 </template>
 
 <script lang="ts">
+import { links } from './data';
 export default {
   data() {
     return {
-      links: [
-        { url: '/', linkName: 'Главная' },
-        { url: '/about', linkName: 'Обо мне' },
-        { url: '/resume', linkName: 'Резюме' },
-        { url: '/portfolio', linkName: 'Портфолио' },
-        { url: '/contact', linkName: 'Контакты' }
-      ],
+      links,
       width: 0,
       showModal: false
     };
@@ -122,14 +117,14 @@ export default {
   position: fixed;
   right: 15px;
   top: 15px;
-  background-image: url('../assets/icons/list.svg');
+  background-image: url('../../assets/icons/list.svg');
   background-size: 32px 32px;
   border: none;
   background-color: transparent;
 }
 
 .navbar-mobile .mobile-nav-toggle {
-  background-image: url('../assets/icons/x.svg');
+  background-image: url('../../assets/icons/x.svg');
 }
 
 @media (max-width: 992px) {

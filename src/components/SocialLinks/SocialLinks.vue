@@ -13,27 +13,11 @@
 </template>
 
 <script lang="ts">
+import { links } from './data';
 export default {
   data() {
     return {
-      links: [
-        {
-          url: 'https://github.com/KarpovYuri',
-          class: 'github'
-        },
-        {
-          url: 'https://www.linkedin.com/in/karpov-yuri/',
-          class: 'linkedin'
-        },
-        {
-          url: 'https://vk.com/karpov_yn',
-          class: 'vk'
-        },
-        {
-          url: 'https://www.facebook.com/profile.php?id=100000459328645',
-          class: 'facebook'
-        }
-      ]
+      links
     };
   }
 };
@@ -74,22 +58,22 @@ export default {
   cursor: pointer;
 }
 .github {
-  background-image: url('../assets/icons/socials/github.svg');
+  background-image: url('../../assets/icons/socials/github.svg');
 }
 
 .vk {
-  background-image: url('../assets/icons/socials/vk.svg');
+  background-image: url('../../assets/icons/socials/vk.svg');
 }
 
 .facebook {
-  background-image: url('../assets/icons/socials/facebook.svg');
+  background-image: url('../../assets/icons/socials/facebook.svg');
 }
 
 .linkedin {
-  background-image: url('../assets/icons/socials/linkedin.svg');
+  background-image: url('../../assets/icons/socials/linkedin.svg');
 }
 
 .instagram {
-  background-image: url('../assets/icons/instagram.svg');
+  background-image: url('../../assets/icons/instagram.svg');
 }
 </style>

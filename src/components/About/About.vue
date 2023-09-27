@@ -24,33 +24,29 @@
 </template>
 
 <script lang="ts">
-import { title } from './data';
+import {
+  title,
+  subtitle,
+  contentTitle,
+  contentDesc1,
+  contentDesc2,
+  aboutLeftData,
+  aboutRightData
+} from './data';
 export default {
   setup() {
-    const list1 = ref([
-      { field: 'Дата рождения:', value: '28 Июня 1993' },
-      { field: 'Сайт:', value: 'www.karaudio.ru' },
-      { field: 'Телефон:', value: '+7 915 545 9396' },
-      { field: 'Город:', value: 'Воронеж, Россия' }
-    ]);
-    const list2 = ref([
-      { field: 'Возраст:', value: '30' },
-      { field: 'GitHub:', value: 'github.com/KarpovYuri' },
-      { field: 'Email:', value: 'yurick@bk.ru' },
-      { field: 'Freelance:', value: 'Возможен' }
-    ]);
+    const list1 = ref(aboutLeftData);
+    const list2 = ref(aboutRightData);
     const uls = ref([{ field: list1 }, { field: list2 }]);
     return { uls, list1, list2 };
   },
   data() {
     return {
       title,
-      subtitle: 'Узнайте больше обо мне',
-      contentTitle: 'Frontend & Backend разработчик',
-      contentDesc1:
-        'Закончил онлайн-курсы по HTML / CSS / Java Script / Type Script / Node.js / React и самостоятельно изучил Vue / Nuxt.',
-      contentDesc2:
-        'Рассматриваю смену профессии в сторону Frontend или Backend - разработки. Ищу возможность применить знания на практике. Готов выполнить тестовое задание, чтобы продемонстрировать уровень навыков.'
+      subtitle,
+      contentTitle,
+      contentDesc1,
+      contentDesc2
     };
   }
 };

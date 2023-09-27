@@ -15,12 +15,13 @@
 </template>
 
 <script lang="ts">
+import { title, subtitleProfession, subtitleCity } from './data';
 export default {
   data() {
     return {
-      title: 'Карпов Юрий',
-      subtitleProfession: 'Web разработчик',
-      subtitleCity: ' из Воронежа'
+      title,
+      subtitleProfession,
+      subtitleCity
     };
   }
 };

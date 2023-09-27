@@ -13,15 +13,11 @@
 </template>
 
 <script lang="ts">
+import { counts } from './data';
 export default {
   data() {
     return {
-      counts: [
-        { title: 'Практических заданий', number: 657, class: 'tasks' },
-        { title: 'Проекта', number: 23, class: 'projects' },
-        { title: 'Часов обучения', number: 1012, class: 'educate' },
-        { title: 'Сертификатов', number: 8, class: 'awards' }
-      ]
+      counts
     };
   }
 };
@@ -83,16 +79,16 @@ export default {
 }
 
 .tasks {
-  background-image: url('../assets/icons/counts/tasks.svg');
+  background-image: url('../../assets/icons/counts/tasks.svg');
 }
 .projects {
-  background-image: url('../assets/icons/counts/projects.svg');
+  background-image: url('../../assets/icons/counts/projects.svg');
 }
 .educate {
-  background-image: url('../assets/icons/counts/educate.svg');
+  background-image: url('../../assets/icons/counts/educate.svg');
 }
 .awards {
-  background-image: url('../assets/icons/counts/awards.svg');
+  background-image: url('../../assets/icons/counts/awards.svg');
 }
 
 @media (max-width: 992px) {
