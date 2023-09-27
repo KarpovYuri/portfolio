@@ -1,7 +1,5 @@
 <template>
   <div class="container">
-    <PageTitle :title="title" />
-    <p class="subtitle">{{ subtitle }}</p>
     <div class="wrapper">
       <div class="img-wrapper">
         <img src="../../assets/img/me.png" class="img-fluid" alt="Фотография" />
@@ -25,8 +23,6 @@
 
 <script lang="ts">
 import {
-  title,
-  subtitle,
   contentTitle,
   contentDesc1,
   contentDesc2,
@@ -42,8 +38,6 @@ export default {
   },
   data() {
     return {
-      title,
-      subtitle,
       contentTitle,
       contentDesc1,
       contentDesc2
@@ -72,8 +66,7 @@ export default {
 }
 
 .container {
-  background: var(--second-bg-color);
-  padding: 30px;
+  padding: 30px 0 30px;
 }
 
 .content {
@@ -156,10 +149,6 @@ export default {
 }
 
 @media (max-width: 576px) {
-  .container {
-    padding: 30px 20px;
-  }
-
   .img-wrapper {
     width: 75%;
   }

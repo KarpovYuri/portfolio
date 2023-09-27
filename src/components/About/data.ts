@@ -1,5 +1,3 @@
-export const title = 'Обо мне';
-export const subtitle = 'Узнайте больше обо мне';
 export const contentTitle = 'Frontend & Backend разработчик';
 export const contentDesc1 = 'Закончил онлайн-курсы по HTML / CSS / Java Script / Type Script / Node.js / React и самостоятельно изучил Vue / Nuxt.';
 export const contentDesc2 = 'Рассматриваю смену профессии в сторону Frontend или Backend - разработки. Ищу возможность применить знания на практике. Готов выполнить тестовое задание, чтобы продемонстрировать уровень навыков.';

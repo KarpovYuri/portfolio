@@ -25,8 +25,7 @@ export default {
 
 <style scoped>
 .container {
-  background: var(--second-bg-color);
-  padding: 30px;
+  padding: 30px 0;
 }
 
 .counts-content {

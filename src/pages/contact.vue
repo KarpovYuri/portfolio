@@ -1,8 +1,25 @@
 <template>
   <div>
     <Head>
-      <Title>Контакты</Title>
+      <Title>{{ contactTitle }}</Title>
     </Head>
-    <h1 align="center">Контакты</h1>
+    <section>
+      <div class="container page-wrp">
+        <PageTitle :title="contactTitle" />
+        <PageSubtitle :subtitle="contactSubtitle" />
+      </div>
+    </section>
   </div>
 </template>
+
+<script lang="ts">
+import { contactTitle, contactSubtitle } from './pageData';
+export default {
+  data() {
+    return {
+      contactTitle,
+      contactSubtitle
+    };
+  }
+};
+</script>

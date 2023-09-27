@@ -1,8 +1,25 @@
 <template>
   <div>
     <Head>
-      <Title>Портфолио</Title>
+      <Title>{{ portfolioTitle }}</Title>
     </Head>
-    <h1 align="center">Портфолио</h1>
+    <section>
+      <div class="container page-wrp">
+        <PageTitle :title="portfolioTitle" />
+        <PageSubtitle :subtitle="portfolioSubtitle" />
+      </div>
+    </section>
   </div>
 </template>
+
+<script lang="ts">
+import { portfolioTitle, portfolioSubtitle } from './pageData';
+export default {
+  data() {
+    return {
+      portfolioTitle,
+      portfolioSubtitle
+    };
+  }
+};
+</script>

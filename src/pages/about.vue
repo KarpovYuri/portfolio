@@ -1,14 +1,30 @@
 <template>
   <div>
     <Head>
-      <Title>Обо мне</Title>
+      <Title>{{ aboutTitle }}</Title>
     </Head>
     <section>
-      <About />
-      <Counts />
-      <Skills />
-      <Tools />
-      <Diplomas />
+      <div class="container page-wrp">
+        <PageTitle :title="aboutTitle" />
+        <PageSubtitle :subtitle="aboutSubtitle" />
+        <About />
+        <Counts />
+        <Skills />
+        <Tools />
+        <Diplomas />
+      </div>
     </section>
   </div>
 </template>
+
+<script lang="ts">
+import { aboutTitle, aboutSubtitle } from './pageData';
+export default {
+  data() {
+    return {
+      aboutTitle,
+      aboutSubtitle
+    };
+  }
+};
+</script>

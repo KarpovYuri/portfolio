@@ -18,6 +18,6 @@ export default {
 <style scoped>
 .container {
   background: var(--second-bg-color);
-  padding: var(--container-padding);
+  padding: var(--container-padding) 0;
 }
 </style>
