@@ -7,6 +7,7 @@
       <div class="container page-wrp">
         <PageTitle :title="resumeTitle" />
         <PageSubtitle :subtitle="resumeSubtitle" />
+        <Resume />
       </div>
     </section>
   </div>

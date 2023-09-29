@@ -1,22 +1,20 @@
 <template>
-  <div class="container">
-    <div class="wrapper">
-      <div class="img-wrapper">
-        <img src="../../assets/img/me.png" class="img-fluid" alt="Фотография" />
+  <div class="container wrapper">
+    <div class="img-wrapper">
+      <img src="../../assets/img/me.png" class="img-fluid" alt="Фотография" />
+    </div>
+    <div class="content">
+      <h3 class="content-title">{{ contentTitle }}</h3>
+      <p class="content-description">{{ contentDesc1 }}</p>
+      <div class="wrapper">
+        <ul v-for="(ul, index) in uls" :key="index" class="list">
+          <li v-for="(item, key) in ul.field" :key="key" class="list-item">
+            <strong>{{ item.field }}</strong>
+            <span>{{ item.value }}</span>
+          </li>
+        </ul>
       </div>
-      <div class="content">
-        <h3 class="content-title">{{ contentTitle }}</h3>
-        <p class="content-description">{{ contentDesc1 }}</p>
-        <div class="wrapper">
-          <ul v-for="(ul, index) in uls" :key="index" class="list">
-            <li v-for="(item, key) in ul.field" :key="key" class="list-item">
-              <strong>{{ item.field }}</strong>
-              <span>{{ item.value }}</span>
-            </li>
-          </ul>
-        </div>
-        <p class="content-description">{{ contentDesc2 }}</p>
-      </div>
+      <p class="content-description">{{ contentDesc2 }}</p>
     </div>
   </div>
 </template>

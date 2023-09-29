@@ -4,7 +4,9 @@
   --third-color: #999999;
   --accent-color: #be264c;
   --border-color: #666666;
+  --border-second-color: rgba(255, 255, 255, 0.2);
   --main-bg-color: #040404;
   --second-bg-color: rgba(0, 0, 0, 0.5);
+  --second-third-color: rgba(255, 255, 255, 0.15);
   --accent-second-color: rgba(255, 255, 255, 0.08);
 }
