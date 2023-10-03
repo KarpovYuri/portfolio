@@ -1,6 +1,8 @@
 export const contentTitle = 'Frontend & Backend разработчик';
-export const contentDesc1 = 'Закончил онлайн-курсы по HTML / CSS / Java Script / Type Script / Node.js / React и самостоятельно изучил Vue / Nuxt.';
-export const contentDesc2 = 'Как таковой цели войти в АйТи у меня нет, но рассматрю варианты смены профессии в сторону Frontend или Backend - разработки. Не откажусь от предложений применить свои знания на практике. Готов выполнить тестовое задание, чтобы продемонстрировать уровень навыков.';
+export const contentDesc1 =
+  'Закончил онлайн-курсы по HTML / CSS / Java Script / Type Script / Node.js / React и самостоятельно изучил Vue / Nuxt.';
+export const contentDesc2 =
+  'Рассмотрю варианты смены профессии в сторону Frontend или Backend - разработки. Не откажусь от предложений применить свои знания на практике. Готов выполнить тестовое задание, чтобы продемонстрировать уровень навыков.';
 export const aboutLeftData = [
   { field: 'Дата рождения:', value: '28 Июня 1988' },
   { field: 'Сайт:', value: 'www.karaudio.ru' },
