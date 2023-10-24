@@ -21,17 +21,29 @@
         <p class="experience-item-dsc">{{ item.description }}</p>
       </div>
     </div>
+    <div class="column">
+      <h3 class="resume-elem-title">{{ title.experience }}</h3>
+      <div v-for="(item, key) in experience" :key="key" class="experience-item">
+        <h4 class="experience-item-title">{{ item.title }}</h4>
+        <h5 class="experience-item-years">{{ item.years }}</h5>
+        <p class="experience-item-dsc">
+          <em>{{ item.organization }}</em>
+        </p>
+        <p class="experience-item-dsc">{{ item.description }}</p>
+      </div>
+    </div>
   </div>
 </template>
 
 <script lang="ts">
-import { title, education, sumary } from './data';
+import { title, education, sumary, experience } from './data';
 export default {
   data() {
     return {
       title,
       education,
-      sumary
+      sumary,
+      experience
     };
   }
 };
@@ -40,12 +52,14 @@ export default {
 <style scoped>
 .container {
   padding: 30px 0 30px;
+  display: flex;
+  gap: 24px;
 }
 .column {
   width: 50%;
 }
 
-.resume-title {
+.resume-elem-title {
   font-size: 26px;
   font-weight: 700;
   margin: 20px 0;
@@ -75,7 +89,7 @@ export default {
 }
 
 .experience-item-title {
-  line-height: 18px;
+  line-height: 22px;
   font-size: 18px;
   font-weight: 600;
   text-transform: uppercase;

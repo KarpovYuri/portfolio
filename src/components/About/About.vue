@@ -5,7 +5,13 @@
     </div>
     <div class="content">
       <h3 class="content-title">{{ contentTitle }}</h3>
-      <p class="content-description">{{ contentDesc1 }}</p>
+      <p
+        v-for="(content, index) in topContent"
+        :key="index"
+        class="content-description"
+      >
+        {{ content }}
+      </p>
       <div class="wrapper">
         <ul v-for="(ul, index) in uls" :key="index" class="list">
           <li v-for="(item, key) in ul.field" :key="key" class="list-item">
@@ -14,7 +20,13 @@
           </li>
         </ul>
       </div>
-      <p class="content-description">{{ contentDesc2 }}</p>
+      <p
+        v-for="(content, index) in bottomContent"
+        :key="index"
+        class="content-description"
+      >
+        {{ content }}
+      </p>
     </div>
   </div>
 </template>
@@ -22,8 +34,8 @@
 <script lang="ts">
 import {
   contentTitle,
-  contentDesc1,
-  contentDesc2,
+  topContent,
+  bottomContent,
   aboutLeftData,
   aboutRightData
 } from './data';
@@ -37,8 +49,8 @@ export default {
   data() {
     return {
       contentTitle,
-      contentDesc1,
-      contentDesc2
+      topContent,
+      bottomContent
     };
   }
 };
