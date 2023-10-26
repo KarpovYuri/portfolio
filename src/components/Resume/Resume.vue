@@ -8,42 +8,65 @@
           <em>{{ sumary.description }}</em>
         </p>
         <ul class="list">
-          <li v-for="(item, key) in sumary.list" :key="key">{{ item }}</li>
+          <li v-for="(contact, index) in sumary.contacts" :key="index">
+            {{ contact }}
+          </li>
         </ul>
       </div>
       <h3 class="resume-elem-title">{{ title.education }}</h3>
-      <div v-for="(item, key) in education" :key="key" class="experience-item">
-        <h4 class="experience-item-title">{{ item.title }}</h4>
-        <h5 class="experience-item-years">{{ item.years }}</h5>
+      <div v-for="(education, key) in educations" :key="key" class="experience-item">
+        <h4 class="experience-item-title">{{ education.title }}</h4>
+        <h5 class="experience-item-years">{{ education.years }}</h5>
         <p class="experience-item-dsc">
-          <em>{{ item.organization }}</em>
+          <em>{{ education.organization }}</em>
         </p>
-        <p class="experience-item-dsc">{{ item.description }}</p>
+        <p class="experience-item-dsc">{{ education.description }}</p>
+        <ul v-if="education.skills" class="list">
+          <li v-for="(skill, index) in education.skills" :key="index">
+            {{ skill }}
+          </li>
+        </ul>
+        <ul v-if="education.projects" class="list">
+          <li v-for="(project, index) in education.projects" :key="index" class="list-item">
+            <a class="experience-item-link" :href="project.href" target="_blank">
+              {{ project.title }}
+            </a>
+          </li>
+        </ul>
       </div>
     </div>
     <div class="column">
       <h3 class="resume-elem-title">{{ title.experience }}</h3>
-      <div v-for="(item, key) in experience" :key="key" class="experience-item">
-        <h4 class="experience-item-title">{{ item.title }}</h4>
-        <h5 class="experience-item-years">{{ item.years }}</h5>
+      <div v-for="(experience, key) in experiences" :key="key" class="experience-item">
+        <h4 class="experience-item-title">{{ experience.title }}</h4>
+        <h5 class="experience-item-years">{{ experience.years }}</h5>
         <p class="experience-item-dsc">
-          <em>{{ item.organization }}</em>
+          <em>{{ experience.organization }}</em>
         </p>
-        <p class="experience-item-dsc">{{ item.description }}</p>
+        <p v-for="(desc, index) in experience.description" :key="index" class="experience-item-dsc">
+          {{ desc }}
+        </p>
+        <ul v-if="experience.projects" class="list">
+          <li v-for="(project, index) in experience.projects" :key="index" class="list-item">
+            <a class="experience-item-link" :href="project.href" target="_blank">
+              {{ project.title }}
+            </a>
+          </li>
+        </ul>
       </div>
     </div>
   </div>
 </template>
 
 <script lang="ts">
-import { title, education, sumary, experience } from './data';
+import { title, educations, sumary, experiences } from './data';
 export default {
   data() {
     return {
       title,
-      education,
+      educations,
       sumary,
-      experience
+      experiences
     };
   }
 };
@@ -66,7 +89,7 @@ export default {
   color: var(--main-color);
 }
 .experience-item {
-  padding: 0 0 20px 20px;
+  padding: 0 0 8px 20px;
   border-left: 2px solid var(--border-second-color);
   position: relative;
 }
@@ -101,15 +124,49 @@ export default {
 .experience-item-dsc {
   line-height: 24px;
   margin-top: 0;
+  margin-bottom: 16px;
+}
+
+.experience-item-dsc:last-child {
+  margin-bottom: 24px;
+}
+
+.experience-item-link {
+  font-family: 'Montserrat', sans-serif;
+  font-weight: 400;
+  font-size: 16px;
+  color: var(--link-color);
+}
+
+.experience-item-link::before {
+  content: '';
+  position: absolute;
+  height: 2px;
+  bottom: 6px;
+  background-color: var(--accent-color);
+  visibility: hidden;
+  width: 0;
+  transition: all 0.3s ease-in-out 0s;
+}
+
+.experience-item-link:hover::before {
+  visibility: visible;
+  width: 60px;
 }
 
 .list {
   padding-left: 20px;
   margin-top: 0;
+  margin-bottom: 16px;
 }
 
 .list li {
   padding-bottom: 10px;
+}
+
+.list-item {
+  list-style: none;
+  position: relative;
 }
 
 .experience-item-years {

@@ -76,7 +76,7 @@ export default {
   font-family: 'Montserrat', sans-serif;
   font-size: 16px;
   font-weight: 400;
-  color: rgba(255, 255, 255, 0.7);
+  color: var(--link-color);
   white-space: nowrap;
   transition: 0.3s;
 }
@@ -90,7 +90,6 @@ export default {
   left: 0;
   background-color: var(--accent-color);
   visibility: hidden;
-  width: 0px;
   transition: all 0.3s ease-in-out 0s;
 }
 
