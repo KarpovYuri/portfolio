@@ -125,6 +125,7 @@ export default {
   line-height: 24px;
   margin-top: 0;
   margin-bottom: 16px;
+  font-size: 16px;
 }
 
 .experience-item-dsc:last-child {
@@ -158,6 +159,8 @@ export default {
   padding-left: 20px;
   margin-top: 0;
   margin-bottom: 16px;
+  font-size: 16px;
+  line-height: 24px;
 }
 
 .list li {
@@ -176,5 +179,43 @@ export default {
   display: inline-block;
   font-weight: 600;
   margin: 0 0 10px;
+}
+
+@media (max-width: 992px) {
+  .container {
+    flex-direction: column;
+    gap: 0;
+  }
+  .column {
+    width: 100%;
+  }
+}
+
+@media (max-width: 576px) {
+  .experience-item-dsc {
+    line-height: 22px;
+    font-size: 14px;
+  }
+
+  .list {
+    font-size: 14px;
+    line-height: 22px;
+  }
+
+  .experience-item-title {
+    line-height: 20px;
+    font-size: 16px;
+  }
+  .experience-item-years {
+    font-size: 14px;
+  }
+
+  .resume-elem-title {
+    font-size: 24px;
+  }
+
+  .experience-item-link {
+    font-size: 14px;
+  }
 }
 </style>

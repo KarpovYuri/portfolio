@@ -32,7 +32,7 @@ export default {
 
 @media (max-width: 576px) {
   .subtitle {
-    font-size: 26px;
+    font-size: 24px;
   }
 }
 </style>
