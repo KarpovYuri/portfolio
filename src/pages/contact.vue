@@ -7,6 +7,7 @@
       <div class="container page-wrp">
         <PageTitle :title="contactTitle" />
         <PageSubtitle :subtitle="contactSubtitle" />
+        <Contact />
       </div>
     </section>
   </div>

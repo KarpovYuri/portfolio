@@ -57,7 +57,7 @@ export default {
   top: -25px;
   left: 50%;
   transform: translateX(-50%);
-  background: rgba(255, 255, 255, 0.1);
+  background: var(--icon-bg-color);
   border-radius: 50px;
   background-size: 24px 24px;
   background-repeat: no-repeat;

@@ -5,11 +5,7 @@
     </div>
     <div class="content">
       <h3 class="content-title">{{ contentTitle }}</h3>
-      <p
-        v-for="(content, index) in topContent"
-        :key="index"
-        class="content-description"
-      >
+      <p v-for="(content, index) in topContent" :key="index" class="content-description">
         {{ content }}
       </p>
       <div class="wrapper">
@@ -20,11 +16,7 @@
           </li>
         </ul>
       </div>
-      <p
-        v-for="(content, index) in bottomContent"
-        :key="index"
-        class="content-description"
-      >
+      <p v-for="(content, index) in bottomContent" :key="index" class="content-description">
         {{ content }}
       </p>
     </div>
@@ -32,13 +24,7 @@
 </template>
 
 <script lang="ts">
-import {
-  contentTitle,
-  topContent,
-  bottomContent,
-  aboutLeftData,
-  aboutRightData
-} from './data';
+import { contentTitle, topContent, bottomContent, aboutLeftData, aboutRightData } from './data';
 export default {
   setup() {
     const list1 = ref(aboutLeftData);
@@ -76,7 +62,7 @@ export default {
 }
 
 .container {
-  padding: 30px 0 30px;
+  padding: 40px 0 30px;
 }
 
 .content {

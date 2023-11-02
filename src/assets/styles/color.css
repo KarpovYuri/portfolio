@@ -10,4 +10,6 @@
   --second-third-color: rgba(255, 255, 255, 0.15);
   --accent-second-color: rgba(255, 255, 255, 0.08);
   --link-color: rgba(255, 255, 255, 0.7);
+  --icon-bg-color: rgba(255, 255, 255, 0.1);
+  --contact-title-color: rgba(255, 255, 255, 0.5);
 }

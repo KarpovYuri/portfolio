@@ -1,13 +1,19 @@
 <template>
-  <div class="social-links">
+  <div class="social-links" :class="[isContact ? 'social-links_contact' : 'social-links_home']">
     <NuxtLink
       v-for="(link, key) in links"
       :key="key"
       :href="link.url"
       class="link"
+      :class="[isContact ? 'link_contact' : 'link_home']"
       target="blank"
     >
-      <button :class="'social-icon ' + link.class" />
+      <button
+        class="social-icon"
+        :class="[
+          isContact ? 'social-icon_contact ' + link.class : 'social-icon_home ' + link.class
+        ]"
+      />
     </NuxtLink>
   </div>
 </template>
@@ -15,6 +21,9 @@
 <script lang="ts">
 import { links } from './data';
 export default {
+  props: {
+    isContact: Boolean
+  },
   data() {
     return {
       links
@@ -24,24 +33,36 @@ export default {
 </script>
 
 <style scoped>
-.social-links {
+.social-links_contact {
+  margin-top: 8px;
+}
+
+.social-links_home {
   margin-top: 40px;
+}
+.social-links {
   display: flex;
 }
 
 .link {
-  font-size: 16px;
   display: flex;
   justify-content: center;
   align-items: center;
   background: rgba(255, 255, 255, 0.1);
   color: var(--main-color);
-  line-height: 1;
   margin-right: 8px;
   border-radius: 50%;
+  transition: ease-in-out 0.3s;
+}
+
+.link_home {
   width: 40px;
   height: 40px;
-  transition: ease-in-out 0.3s;
+}
+
+.link_contact {
+  width: 26px;
+  height: 26px;
 }
 
 .link:hover {
@@ -50,12 +71,21 @@ export default {
 }
 
 .social-icon {
-  width: 20px;
-  height: 20px;
-  background-size: 20px 20px;
   border: none;
   background-color: transparent;
   cursor: pointer;
+}
+
+.social-icon_home {
+  width: 20px;
+  height: 20px;
+  background-size: 20px 20px;
+}
+
+.social-icon_contact {
+  width: 16px;
+  height: 16px;
+  background-size: 16px 16px;
 }
 .github {
   background-image: url('../../assets/icons/socials/github.svg');
