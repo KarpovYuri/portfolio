@@ -58,7 +58,7 @@ export default {
   left: 50%;
   transform: translateX(-50%);
   background: var(--icon-bg-color);
-  border-radius: 50px;
+  border-radius: 50%;
   background-size: 24px 24px;
   background-repeat: no-repeat;
   background-position: center;

@@ -48,10 +48,11 @@ export default {
   width: 52px;
   float: left;
   background: var(--icon-bg-color);
-  border-radius: 50px;
+  border-radius: 50%;
   background-size: 26px 26px;
   background-repeat: no-repeat;
   background-position: center;
+  flex-shrink: 0;
 }
 
 .telegram {
@@ -82,5 +83,29 @@ export default {
   margin: 8px 0 0;
   color: var(--main-color);
   font-size: 14px;
+}
+
+@media (max-width: 992px) {
+  .contacts {
+    flex-direction: column;
+  }
+  .contacts-item {
+    width: 100%;
+  }
+}
+
+@media (max-width: 576px) {
+  .contacts-item {
+    padding: 16px;
+    min-height: 90px;
+  }
+  .contact-icon {
+    height: 42px;
+    width: 42px;
+  }
+
+  .contact-title {
+    font-size: 16px;
+  }
 }
 </style>
