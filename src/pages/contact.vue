@@ -8,6 +8,7 @@
         <PageTitle :title="contactTitle" />
         <PageSubtitle :subtitle="contactSubtitle" />
         <Contact />
+        <Form />
       </div>
     </section>
   </div>

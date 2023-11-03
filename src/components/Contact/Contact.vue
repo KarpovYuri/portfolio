@@ -1,4 +1,3 @@
-import { wrap } from 'module';
 <template>
   <div class="container">
     <div class="contacts">
