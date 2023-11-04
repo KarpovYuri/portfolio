@@ -53,4 +53,17 @@
   align-self: center;
   cursor: pointer;
 }
+
+@media (max-width: 768px) {
+  .input-wrp {
+    flex-direction: column;
+    gap: 16px;
+  }
+}
+
+@media (max-width: 576px) {
+  .email-form {
+    padding: 20px 16px;
+  }
+}
 </style>
