@@ -43,6 +43,10 @@
   outline: none;
 }
 
+.form-input:focus {
+  background-color: rgba(255, 255, 255, 0.11);
+}
+
 .form-button {
   background: var(--accent-color);
   border: 0;
@@ -52,6 +56,10 @@
   border-radius: 4px;
   align-self: center;
   cursor: pointer;
+}
+
+.form-button:hover {
+  background: var(--btn-hover-color);
 }
 
 @media (max-width: 768px) {
