@@ -33,7 +33,7 @@ export default defineNuxtConfig({
         wght: [400, 500, 600, 700]
       },
       Raleway: {
-        wght: [500, 700]
+        wght: [500, 600, 700]
       },
       'Open Sans': {
         wght: [400, 600, 700],

@@ -7,6 +7,7 @@
       <div class="container page-wrp">
         <PageTitle :title="portfolioTitle" />
         <PageSubtitle :subtitle="portfolioSubtitle" />
+        <Projects />
       </div>
     </section>
   </div>
