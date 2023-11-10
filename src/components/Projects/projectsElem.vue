@@ -167,4 +167,16 @@ export default {
   bottom: 15px;
   right: 15px;
 }
+
+@media (max-width: 992px) {
+  .project {
+    width: calc((100% - 24px) / 2);
+  }
+}
+
+@media (max-width: 768px) {
+  .project {
+    width: 100%;
+  }
+}
 </style>

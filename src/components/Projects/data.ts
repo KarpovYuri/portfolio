@@ -6,7 +6,7 @@ export const projects = [
   {
     preview: htlPreview,
     title: 'Научиться учиться',
-    demoLink: 'https://karpovyuri.github.io/how-to-learn/index.html',
+    demoLink: 'https://how-to-learn.karaudio.ru/',
     codeLink: 'https://github.com/KarpovYuri/how-to-learn'
   },
   {
@@ -17,6 +17,6 @@ export const projects = [
   {
     preview: dinamikPreview,
     title: 'Студия Динамик',
-    demoLink: 'https://karpovyuri.github.io/how-to-learn/index.html'
+    demoLink: 'https://dinamik.karaudio.ru/'
   }
 ];

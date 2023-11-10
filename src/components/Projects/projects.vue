@@ -22,5 +22,6 @@ export default {
 .projects {
   display: flex;
   gap: 24px;
+  flex-wrap: wrap;
 }
 </style>
