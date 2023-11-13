@@ -87,7 +87,7 @@ export const educations = [
 
 export const experiences = [
   {
-    title: 'Старший студент на факультете Веб-разработки (part time)',
+    title: 'Старший студент на факультете Веб-разработки',
     years: '2022 - 2023',
     organization: 'Яндекс Практикум',
     description: [
