@@ -3,8 +3,15 @@ import vrtPreview from '../../assets/img/projects/vrtstudio.png';
 import htlPreview from '../../assets/img/projects/htl.png';
 import wordpressPreview from '../../assets/img/projects/wordpress.png';
 import uberPreview from '../../assets/img/projects/uber.png';
+import russianTravelPreview from '../../assets/img/projects/russian-travel.png';
 
 export const projects = [
+  {
+    preview: russianTravelPreview,
+    title: 'Путешествия по Росси',
+    demoLink: 'https://russian-travel.karaudio.ru/',
+    codeLink: 'https://github.com/KarpovYuri/russian-travel'
+  },
   {
     preview: uberPreview,
     title: 'Uber Partners',
