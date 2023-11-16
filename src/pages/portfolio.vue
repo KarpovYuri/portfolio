@@ -16,6 +16,7 @@
           >
             Остальные работы
           </NuxtLink>
+          <Lightbox />
         </div>
       </div>
     </section>

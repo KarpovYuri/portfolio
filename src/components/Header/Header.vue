@@ -34,7 +34,6 @@ export default {
   height: 100vh;
   display: flex;
   align-items: center;
-  z-index: 997;
   overflow-y: auto;
 }
 
