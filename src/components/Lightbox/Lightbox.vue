@@ -1,16 +1,16 @@
 <template>
   <div class="lightbox-container">
-    <img class="lightbox-image" :src="dinamikPreview" />
+    <img class="lightbox-image" :src="russianTravelPreview" />
     <button class="close-btn" aria-label="Close" />
   </div>
 </template>
 
 <script lang="ts">
-import dinamikPreview from './../../assets/img/projects/dinamik.png';
+import russianTravelPreview from './../../assets/img/projects/russian-travel.png';
 
 export default {
   data() {
-    return { dinamikPreview };
+    return { russianTravelPreview };
   }
 };
 </script>
@@ -26,7 +26,6 @@ export default {
   display: flex;
   align-items: center;
   justify-content: center;
-  display: none;
 }
 
 .lightbox-image {
