@@ -4,9 +4,7 @@
     <div class="project-info">
       <h4 class="project-title">{{ project.title }}</h4>
       <div class="project-links">
-        <NuxtLink href="#" class="project-link">
-          <button class="project-link-btn project-link-btn_more" />
-        </NuxtLink>
+        <button class="project-link-btn project-link-btn_more" @click="openLightbox" />
         <NuxtLink :href="project.demoLink" target="blank" class="project-link">
           <button class="project-link-btn project-link-btn_view">Demo</button>
         </NuxtLink>
@@ -31,6 +29,12 @@ export default {
       type: Object,
       default: () => {}
     }
+  },
+  emits: ['open'],
+  methods: {
+    openLightbox() {
+      this.$emit('open');
+    }
   }
 };
 </script>
@@ -41,6 +45,7 @@ export default {
   transition: 0.3s;
   position: relative;
   overflow: hidden;
+  border-radius: 26px;
 }
 
 .project::before {
@@ -53,6 +58,7 @@ export default {
   bottom: 30px;
   transition: all ease-in-out 0.3s;
   opacity: 0;
+  border-radius: 20px;
 }
 
 .project-title {
@@ -94,6 +100,7 @@ export default {
   border-top: 3px solid var(--main-color);
   border-left: 3px solid var(--main-color);
   transition: all 0.5s ease 0s;
+  border-radius: 8px 0;
 }
 
 .project-info::after {
@@ -107,6 +114,7 @@ export default {
   border-bottom: 3px solid var(--main-color);
   border-right: 3px solid var(--main-color);
   transition: all 0.5s ease 0s;
+  border-radius: 8px 0;
 }
 
 .project-links {
@@ -122,6 +130,7 @@ export default {
   height: 28px;
   background-size: 28px 28px;
   transition: 0.35s ease 0s;
+  outline: none;
 }
 
 .project-link-btn_more {
