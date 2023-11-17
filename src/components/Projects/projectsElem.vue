@@ -9,7 +9,7 @@
           <button class="project-link-btn project-link-btn_view">Demo</button>
         </NuxtLink>
         <NuxtLink
-          v-if="project.codeLink"
+          v-show="project.codeLink"
           :href="project.codeLink"
           target="blank"
           class="project-link"
@@ -33,7 +33,7 @@ export default {
   emits: ['open'],
   methods: {
     openLightbox() {
-      this.$emit('open');
+      this.$emit('open', this.project);
     }
   }
 };

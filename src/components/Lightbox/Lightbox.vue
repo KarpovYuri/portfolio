@@ -1,13 +1,26 @@
 <template>
   <transition>
     <div class="lightbox-container">
-      <h2 class="lightbox-title">Путешествия по России</h2>
-      <img class="lightbox-image" :src="russianTravelPreview" />
+      <h2 class="lightbox-title">{{ data.title }}</h2>
+      <img class="lightbox-image" :src="data.preview" />
       <div class="lightbox-description-container">
-        <p class="lightbox-description">Одностраничный сайт о методах и принципах обучения.</p>
-        <p class="lightbox-description">
-          <em>HTML, CSS, Flexbox, Grid-layout, БЭМ</em>
+        <p v-show="data.description" class="lightbox-description">{{ data.description }}</p>
+        <p v-show="data.functional" class="lightbox-description">{{ data.functional }}</p>
+        <p v-show="data.technologies" class="lightbox-description">
+          <em>{{ data.technologies }}</em>
         </p>
+        <ul class="lightbox-links">
+          <li v-show="data.demoLink">
+            <NuxtLink :href="data.demoLink" target="blank" class="lightbox-link">
+              Демо проекта
+            </NuxtLink>
+          </li>
+          <li v-show="data.codeLink">
+            <NuxtLink :href="data.codeLink" target="blank" class="lightbox-link">
+              Код проекта
+            </NuxtLink>
+          </li>
+        </ul>
       </div>
       <button class="close-btn" aria-label="Close" @click="closeLightbox" />
     </div>
@@ -15,20 +28,16 @@
 </template>
 
 <script lang="ts">
-import russianTravelPreview from './../../assets/img/projects/russian-travel.png';
-
 export default {
   name: 'Lightbox',
   props: {
     show: {
       type: Boolean,
       default: false
-    }
+    },
+    data: { type: Object, default: () => {} }
   },
   emits: ['close'],
-  data() {
-    return { russianTravelPreview };
-  },
   mounted() {
     window.addEventListener('keydown', this.escCloseLightbox);
   },
@@ -127,5 +136,44 @@ export default {
 
 .v-leave-active {
   transition: all 0.25s ease-in;
+}
+
+.lightbox-link {
+  font-family: 'Montserrat', sans-serif;
+  font-weight: 400;
+  font-size: 16px;
+  color: var(--link-color);
+}
+
+.lightbox-link::before {
+  content: '';
+  position: absolute;
+  height: 2px;
+  bottom: -1px;
+  background-color: var(--accent-color);
+  visibility: hidden;
+  width: 0;
+  transition: all 0.3s ease-in-out 0s;
+}
+
+.lightbox-link:hover::before {
+  visibility: visible;
+  width: 60px;
+}
+
+.lightbox-links {
+  list-style: none;
+  font-size: 16px;
+  line-height: 24px;
+  text-align: center;
+  padding: 0;
+  margin: 0;
+  display: flex;
+  flex-direction: column;
+  gap: 6px;
+}
+
+.lightbox-links li {
+  position: relative;
 }
 </style>

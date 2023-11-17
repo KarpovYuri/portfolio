@@ -7,7 +7,12 @@
       @open="toggleLightbox"
     />
   </div>
-  <Lightbox v-show="isShowLightbox" :show="isShowLightbox" @close="toggleLightbox" />
+  <Lightbox
+    v-show="isShowLightbox"
+    :show="isShowLightbox"
+    :data="projectData"
+    @close="toggleLightbox"
+  />
 </template>
 
 <script lang="ts">
@@ -16,10 +21,13 @@ import { projects } from './data';
 export default {
   name: 'Projects',
   data() {
-    return { projects, isShowLightbox: false };
+    return { projects, isShowLightbox: false, projectData: {} };
   },
   methods: {
-    toggleLightbox() {
+    toggleLightbox(currentProjectData: {}) {
+      if (!this.isShowLightbox) {
+        this.projectData = currentProjectData;
+      }
       this.isShowLightbox = !this.isShowLightbox;
     }
   }
