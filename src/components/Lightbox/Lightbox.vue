@@ -5,20 +5,18 @@
       <img class="lightbox-image" :src="data.preview" />
       <div class="lightbox-description-container">
         <p v-show="data.description" class="lightbox-description">{{ data.description }}</p>
-        <p v-show="data.functional" class="lightbox-description">{{ data.functional }}</p>
-        <p v-show="data.technologies" class="lightbox-description">
-          <em>{{ data.technologies }}</em>
+        <p v-show="data.functional" class="lightbox-functional">
+          {{ data.functional }}
+        </p>
+        <p v-show="data.technologies" class="lightbox-technologies">
+          {{ data.technologies }}
         </p>
         <ul class="lightbox-links">
           <li v-show="data.demoLink">
-            <NuxtLink :href="data.demoLink" target="blank" class="lightbox-link">
-              Демо проекта
-            </NuxtLink>
+            <NuxtLink :href="data.demoLink" target="blank" class="lightbox-link"> Демо </NuxtLink>
           </li>
           <li v-show="data.codeLink">
-            <NuxtLink :href="data.codeLink" target="blank" class="lightbox-link">
-              Код проекта
-            </NuxtLink>
+            <NuxtLink :href="data.codeLink" target="blank" class="lightbox-link"> Код </NuxtLink>
           </li>
         </ul>
       </div>
@@ -83,7 +81,7 @@ export default {
 
 .lightbox-image {
   max-width: 800px;
-  border-radius: 30px;
+  border-radius: 20px;
 }
 
 .lightbox-description-container {
@@ -94,9 +92,25 @@ export default {
 }
 
 .lightbox-description {
-  margin: 12px 0;
+  margin: 12px 0 0;
   font-size: 16px;
   text-align: center;
+}
+.lightbox-functional {
+  margin: 12px 0 0;
+  font-size: 14px;
+  text-align: center;
+  font-style: italic;
+  line-height: 20px;
+}
+
+.lightbox-technologies {
+  margin: 12px 0 0;
+  font-size: 16px;
+  text-align: center;
+  color: var(--accent-color);
+  font-family: 'Poppins', sans-serif;
+  font-weight: 600;
 }
 
 .close-btn {
@@ -158,7 +172,7 @@ export default {
 
 .lightbox-link:hover::before {
   visibility: visible;
-  width: 60px;
+  width: 30px;
 }
 
 .lightbox-links {
@@ -167,10 +181,10 @@ export default {
   line-height: 24px;
   text-align: center;
   padding: 0;
-  margin: 0;
+  margin: 8px 0 0;
   display: flex;
-  flex-direction: column;
-  gap: 6px;
+  gap: 16px;
+  justify-content: center;
 }
 
 .lightbox-links li {

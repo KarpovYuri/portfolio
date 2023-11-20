@@ -45,7 +45,7 @@ export default {
   transition: 0.3s;
   position: relative;
   overflow: hidden;
-  border-radius: 26px;
+  border-radius: 20px;
 }
 
 .project::before {
@@ -100,7 +100,7 @@ export default {
   border-top: 3px solid var(--main-color);
   border-left: 3px solid var(--main-color);
   transition: all 0.5s ease 0s;
-  border-radius: 8px 0;
+  border-radius: 6px 0;
 }
 
 .project-info::after {
@@ -114,7 +114,7 @@ export default {
   border-bottom: 3px solid var(--main-color);
   border-right: 3px solid var(--main-color);
   transition: all 0.5s ease 0s;
-  border-radius: 8px 0;
+  border-radius: 6px 0;
 }
 
 .project-links {
