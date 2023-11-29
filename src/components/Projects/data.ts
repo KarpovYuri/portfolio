@@ -8,7 +8,7 @@ import russianTravelPreview from '../../assets/img/projects/russian-travel.png';
 export const projects = [
   {
     preview: russianTravelPreview,
-    title: 'Путешествия по Росси',
+    title: 'Путешествия по России',
     demoLink: 'https://russian-travel.karaudio.ru/',
     codeLink: 'https://github.com/KarpovYuri/russian-travel',
     description: 'Лендинг о путешествиях по России и интересных местах для отдыха.',

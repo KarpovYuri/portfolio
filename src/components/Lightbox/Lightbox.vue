@@ -73,14 +73,14 @@ export default {
 .lightbox-title {
   font-size: 28px;
   margin: 0;
-  padding: 0 0 30px;
+  padding: 0 12px 30px;
   max-width: 800px;
-  width: 100%;
   text-align: center;
 }
 
 .lightbox-image {
   max-width: 800px;
+  max-height: 56vh;
   border-radius: 20px;
 }
 
@@ -95,6 +95,7 @@ export default {
   margin: 12px 0 0;
   font-size: 16px;
   text-align: center;
+  line-height: 20px;
 }
 .lightbox-functional {
   margin: 12px 0 0;
@@ -107,6 +108,7 @@ export default {
 .lightbox-technologies {
   margin: 12px 0 0;
   font-size: 16px;
+  line-height: 20px;
   text-align: center;
   color: var(--accent-color);
   font-family: 'Poppins', sans-serif;
@@ -177,7 +179,6 @@ export default {
 
 .lightbox-links {
   list-style: none;
-  font-size: 16px;
   line-height: 24px;
   text-align: center;
   padding: 0;
@@ -189,5 +190,81 @@ export default {
 
 .lightbox-links li {
   position: relative;
+}
+
+@media (max-width: 992px) {
+  .lightbox-title {
+    font-size: 22px;
+    padding-bottom: 20px;
+  }
+  .lightbox-image {
+    max-width: 720px;
+    max-height: 51vh;
+  }
+
+  .lightbox-description-container {
+    max-width: 720px;
+    padding-top: 10px;
+  }
+
+  .lightbox-description {
+    margin-top: 10px;
+    font-size: 14px;
+    line-height: 18px;
+  }
+
+  .lightbox-functional {
+    margin-top: 10px;
+    font-size: 12px;
+    line-height: 18px;
+  }
+
+  .lightbox-technologies {
+    margin-top: 10px;
+    font-size: 14px;
+    line-height: 18px;
+  }
+
+  .lightbox-links {
+    margin-top: 10px;
+    line-height: 20px;
+    gap: 12px;
+  }
+
+  .lightbox-link {
+    font-size: 14px;
+  }
+
+  .close-btn {
+    width: 32px;
+    height: 32px;
+    top: 10px;
+    right: 10px;
+    background-size: 18px auto;
+  }
+}
+
+@media (max-width: 768px) {
+  .lightbox-image {
+    max-width: 480px;
+    max-height: 51vh;
+  }
+
+  .lightbox-description-container {
+    max-width: 480px;
+    padding-top: 10px;
+  }
+}
+
+@media (max-width: 576px) {
+  .lightbox-image {
+    max-width: 90%;
+    max-height: 34vh;
+  }
+
+  .lightbox-description-container {
+    max-width: 90%;
+    padding-top: 10px;
+  }
 }
 </style>

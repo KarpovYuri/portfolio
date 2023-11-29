@@ -25,8 +25,12 @@ export default {
   },
   methods: {
     toggleLightbox(currentProjectData: {}) {
+      const body = document.querySelector('body');
       if (!this.isShowLightbox) {
+        body!.style.overflow = 'hidden';
         this.projectData = currentProjectData;
+      } else {
+        body!.style.removeProperty('overflow');
       }
       this.isShowLightbox = !this.isShowLightbox;
     }
