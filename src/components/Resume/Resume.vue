@@ -13,6 +13,26 @@
           </li>
         </ul>
       </div>
+      <h3 class="resume-elem-title">{{ title.experience }}</h3>
+      <div v-for="(experience, key) in experiences" :key="key" class="experience-item">
+        <h4 class="experience-item-title">{{ experience.title }}</h4>
+        <h5 class="experience-item-years">{{ experience.years }}</h5>
+        <p class="experience-item-dsc">
+          <em>{{ experience.organization }}</em>
+        </p>
+        <p v-for="(desc, index) in experience.description" :key="index" class="experience-item-dsc">
+          {{ desc }}
+        </p>
+        <ul v-if="experience.projects" class="list">
+          <li v-for="(project, index) in experience.projects" :key="index" class="list-item">
+            <NuxtLink class="experience-item-link" :href="project.href" target="_blank">
+              {{ project.title }}
+            </NuxtLink>
+          </li>
+        </ul>
+      </div>
+    </div>
+    <div class="column">
       <h3 class="resume-elem-title">{{ title.education }}</h3>
       <div v-for="(education, key) in educations" :key="key" class="experience-item">
         <h4 class="experience-item-title">{{ education.title }}</h4>
@@ -28,26 +48,6 @@
         </ul>
         <ul v-if="education.projects" class="list">
           <li v-for="(project, index) in education.projects" :key="index" class="list-item">
-            <NuxtLink class="experience-item-link" :href="project.href" target="_blank">
-              {{ project.title }}
-            </NuxtLink>
-          </li>
-        </ul>
-      </div>
-    </div>
-    <div class="column">
-      <h3 class="resume-elem-title">{{ title.experience }}</h3>
-      <div v-for="(experience, key) in experiences" :key="key" class="experience-item">
-        <h4 class="experience-item-title">{{ experience.title }}</h4>
-        <h5 class="experience-item-years">{{ experience.years }}</h5>
-        <p class="experience-item-dsc">
-          <em>{{ experience.organization }}</em>
-        </p>
-        <p v-for="(desc, index) in experience.description" :key="index" class="experience-item-dsc">
-          {{ desc }}
-        </p>
-        <ul v-if="experience.projects" class="list">
-          <li v-for="(project, index) in experience.projects" :key="index" class="list-item">
             <NuxtLink class="experience-item-link" :href="project.href" target="_blank">
               {{ project.title }}
             </NuxtLink>
