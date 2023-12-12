@@ -36,7 +36,7 @@
       <h3 class="resume-elem-title">{{ title.education }}</h3>
       <div v-for="(education, key) in educations" :key="key" class="experience-item">
         <h4 class="experience-item-title">{{ education.title }}</h4>
-        <h5 class="experience-item-years">{{ education.years }}</h5>
+        <h5 v-show="education.years" class="experience-item-years">{{ education.years }}</h5>
         <p class="experience-item-dsc">
           <em>{{ education.organization }}</em>
         </p>

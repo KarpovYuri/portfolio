@@ -4,8 +4,19 @@ import htlPreview from '../../assets/img/projects/htl.png';
 import wordpressPreview from '../../assets/img/projects/wordpress.png';
 import uberPreview from '../../assets/img/projects/uber.png';
 import russianTravelPreview from '../../assets/img/projects/russian-travel.png';
+import mestoPreview from '../../assets/img/projects/mesto.png';
 
 export const projects = [
+  {
+    preview: mestoPreview,
+    title: 'Mesto',
+    demoLink: 'https://mesto.karaudio.ru/',
+    codeLink: 'https://github.com/KarpovYuri/mesto',
+    description: 'Проект, позволяющий добовлять фотографии интересных мест.',
+    functional:
+      'Проект написан в ООП стиле. Реализован функционал редактирования профиля, добавления / удаления карточки, постановки / снятия лайка, открытия фотографии в полном размере.',
+    technologies: 'HTML, CSS, TypeScript, BEM, Flexbox, Grid Layout, Adaptive, Responsive, Webpack'
+  },
   {
     preview: russianTravelPreview,
     title: 'Путешествия по России',

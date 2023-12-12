@@ -8,13 +8,13 @@ export const bottomContent = [
   'Рассмотрю варианты смены профессии в сторону Frontend или Backend - разработки. Не откажусь от предложений применить свои знания на практике. Готов выполнить тестовое задание, чтобы продемонстрировать уровень навыков.'
 ];
 export const aboutLeftData = [
-  { field: 'Дата рождения:', value: '28 Июня 1990' },
+  // { field: 'Дата рождения:', value: '28 Июня 1978' },
   { field: 'Сайт:', value: 'www.karaudio.ru' },
   { field: 'Телефон:', value: '+7 950 775 7533' },
   { field: 'Город:', value: 'Воронеж, Россия' }
 ];
 export const aboutRightData = [
-  { field: 'Возраст:', value: '33' },
+  // { field: 'Возраст:', value: '45' },
   { field: 'GitHub:', value: 'github.com/KarpovYuri' },
   { field: 'Email:', value: 'yurick@bk.ru' },
   { field: 'Freelance:', value: 'Возможен' }
