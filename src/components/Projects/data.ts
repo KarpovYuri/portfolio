@@ -5,11 +5,31 @@ import wordpressPreview from '../../assets/img/projects/wordpress.png';
 import uberPreview from '../../assets/img/projects/uber.png';
 import russianTravelPreview from '../../assets/img/projects/russian-travel.png';
 import mestoPreview from '../../assets/img/projects/mesto.png';
+import mestoBackendPreview from '../../assets/img/projects/Mesto-backend.png';
+import mestoReactPreview from '../../assets/img/projects/Mesto-react-frontend.png';
 
 export const projects = [
   {
+    preview: mestoReactPreview,
+    title: 'Mesto на React',
+    codeLink: 'https://github.com/KarpovYuri/react-mesto-api-full/tree/main/frontend',
+    description: 'Проект, позволяющий добовлять фотографии интересных мест.',
+    functional:
+      'Проект написан на React. Реализован функционал редактирования профиля, добавления / удаления карточки, постановки / снятия лайка, открытия фотографии в полном размере.',
+    technologies: 'HTML, CSS, React, JavaScript, BEM, Flexbox, Grid Layout, Adaptive, Responsive'
+  },
+  {
+    preview: mestoBackendPreview,
+    title: 'Mesto Api',
+    codeLink: 'https://github.com/KarpovYuri/react-mesto-api-full/tree/main/backend',
+    description: 'Backend проекта Mesto, позволяющий добовлять фотографии интересных мест.',
+    functional:
+      'В API реализован функционал регистрации / авторизации пользователя, редактирования профиля, добавления / удаления карточки, постановки / снятия лайка.',
+    technologies: 'JavaScript, Node.js, Express.js, Mongoose, MongoDB'
+  },
+  {
     preview: mestoPreview,
-    title: 'Mesto',
+    title: 'Mesto на TypeScript',
     demoLink: 'https://mesto.karaudio.ru/',
     codeLink: 'https://github.com/KarpovYuri/mesto',
     description: 'Проект, позволяющий добовлять фотографии интересных мест.',

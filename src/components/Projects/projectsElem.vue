@@ -5,7 +5,12 @@
       <h4 class="project-title">{{ project.title }}</h4>
       <div class="project-links">
         <button class="project-link-btn project-link-btn_more" @click="openLightbox" />
-        <NuxtLink :href="project.demoLink" target="blank" class="project-link">
+        <NuxtLink
+          v-show="project.demoLink"
+          :href="project.demoLink"
+          target="blank"
+          class="project-link"
+        >
           <button class="project-link-btn project-link-btn_view">Demo</button>
         </NuxtLink>
         <NuxtLink
