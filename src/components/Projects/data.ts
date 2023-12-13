@@ -7,11 +7,32 @@ import russianTravelPreview from '../../assets/img/projects/russian-travel.png';
 import mestoPreview from '../../assets/img/projects/mesto.png';
 import mestoBackendPreview from '../../assets/img/projects/Mesto-backend.png';
 import mestoReactPreview from '../../assets/img/projects/Mesto-react-frontend.png';
+import moviesReactPreview from '../../assets/img/projects/Movies.png';
+import moviesApiPreview from '../../assets/img/projects/Movies-api.png';
 
 export const projects = [
   {
+    preview: moviesReactPreview,
+    title: 'Movies explorer на React',
+    codeLink: 'https://github.com/KarpovYuri/movies-explorer-frontend',
+    description: 'Проект, позволяющий осуществлять поиск фильмов по базе.',
+    functional:
+      'Проект написан на React. Реализован функционал поиска фильмов по названию и длительности, сохранение и удаление фильмов, просмотр трейлера, регистрация / авторизация, редактирование профиля пользователя, живая валидация полей форм.',
+    technologies: 'HTML, CSS, React, JavaScript, BEM, Flexbox, Grid Layout, Adaptive, Responsive'
+  },
+  {
+    preview: moviesApiPreview,
+    title: 'Movies explorer Api',
+    codeLink: 'https://github.com/KarpovYuri/movies-explorer-api',
+    description: 'Backend проекта Movies, позволяющий осуществлять поиск фильмов по базе.',
+    functional:
+      'В API реализован функционал регистрации / авторизации пользователя, обновления данных пользователя, получение информации о текущем пользователе, получение списка фильмов, сохранение / удаление фильмов, централизованная обработка ошибок, валидация входящих данных.',
+    technologies: 'JavaScript, Node.js, Express.js, Mongoose, MongoDB'
+  },
+  {
     preview: mestoReactPreview,
     title: 'Mesto на React',
+    demoLink: 'https://mesto-react.karaudio.ru/',
     codeLink: 'https://github.com/KarpovYuri/react-mesto-api-full/tree/main/frontend',
     description: 'Проект, позволяющий добовлять фотографии интересных мест.',
     functional:
