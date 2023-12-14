@@ -9,11 +9,23 @@ import mestoBackendPreview from '../../assets/img/projects/Mesto-backend.png';
 import mestoReactPreview from '../../assets/img/projects/Mesto-react-frontend.png';
 import moviesReactPreview from '../../assets/img/projects/Movies.png';
 import moviesApiPreview from '../../assets/img/projects/Movies-api.png';
+import chatPreview from '../../assets/img/projects/chat.png';
 
 export const projects = [
   {
+    preview: chatPreview,
+    title: 'Мессенджер',
+    demoLink: 'https://amazing-syrniki-922dd2.netlify.app/',
+    codeLink: 'https://github.com/KarpovYuri/middle.messenger.praktikum.yandex',
+    description: 'Веб-прилжение для обмена сообщениями.',
+    functional:
+      'В приложении реализован функционал регистрации, авторизации, обновления данных профиля, смена пароля, смена аватара, создание и удаление чата, добавление и удаление пользователей в чат, отправка и получение текстовых сообщений.',
+    technologies:
+      'HTML, SCSS, React, TypeScript, Express.js, Handlebars, Mocha, WebSocket, Webpack, Docker'
+  },
+  {
     preview: moviesReactPreview,
-    title: 'Movies explorer на React',
+    title: 'Movies explorer',
     codeLink: 'https://github.com/KarpovYuri/movies-explorer-frontend',
     description: 'Проект, позволяющий осуществлять поиск фильмов по базе.',
     functional:
