@@ -54,14 +54,14 @@
           </li>
         </ul>
       </div>
-      <ul class="list" style="margin-top: 68px">
-        <li class="list-item" style="display: flex; justify-content: flex-end; padding-right: 24px">
-          <NuxtLink
-            class="experience-item-link"
-            href="https://voronezh.hh.ru/resume/7841421eff04fbdd630039ed1f7a56326f5a52?disableBrowserCache=true&hhtmFrom=resume_list"
-            target="_blank"
-          >
-            Резюме на hh.ru
+      <ul class="list list_link">
+        <li
+          v-for="(resumeLink, index) in resumeLinks"
+          :key="index"
+          class="list-item list-item_link"
+        >
+          <NuxtLink class="experience-item-link" :href="resumeLink.link" target="_blank">
+            {{ resumeLink.linkText }}
           </NuxtLink>
         </li>
       </ul>
@@ -70,14 +70,16 @@
 </template>
 
 <script lang="ts">
-import { title, educations, sumary, experiences } from './data';
+import { title, educations, sumary, experiences, resume, resumeLinks } from './data';
 export default {
   data() {
     return {
       title,
       educations,
       sumary,
-      experiences
+      experiences,
+      resume,
+      resumeLinks
     };
   }
 };
@@ -174,6 +176,10 @@ export default {
   line-height: 24px;
 }
 
+list_link {
+  margin-top: 68px;
+}
+
 .list li {
   padding-bottom: 10px;
 }
@@ -181,6 +187,12 @@ export default {
 .list-item {
   list-style: none;
   position: relative;
+}
+
+.list-item_link {
+  display: flex;
+  justify-content: flex-end;
+  padding-right: 24px;
 }
 
 .experience-item-years {
