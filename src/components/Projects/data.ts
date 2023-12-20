@@ -17,7 +17,7 @@ export const projects = [
     title: 'Мессенджер',
     demoLink: 'https://amazing-syrniki-922dd2.netlify.app/',
     codeLink: 'https://github.com/KarpovYuri/middle.messenger.praktikum.yandex',
-    description: 'Веб-прилжение для обмена сообщениями.',
+    description: 'Веб-приложение для обмена сообщениями.',
     functional:
       'В приложении реализован функционал регистрации, авторизации, обновления данных профиля, смена пароля, смена аватара, создание и удаление чата, добавление и удаление пользователей в чат, отправка и получение текстовых сообщений.',
     technologies:
@@ -26,6 +26,7 @@ export const projects = [
   {
     preview: moviesReactPreview,
     title: 'Movies explorer',
+    demoLink: 'https://movies.karaudio.ru/',
     codeLink: 'https://github.com/KarpovYuri/movies-explorer-frontend',
     description: 'Проект, позволяющий осуществлять поиск фильмов по базе.',
     functional:

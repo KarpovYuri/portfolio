@@ -1,7 +1,5 @@
 import resume from '../../static/resume.pdf';
 
-export { resume };
-
 export const resumeLinks = [
   {
     link: 'https://voronezh.hh.ru/resume/7841421eff04fbdd630039ed1f7a56326f5a52?disableBrowserCache=true&hhtmFrom=resume_list',

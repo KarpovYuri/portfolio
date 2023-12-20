@@ -70,7 +70,7 @@
 </template>
 
 <script lang="ts">
-import { title, educations, sumary, experiences, resume, resumeLinks } from './data';
+import { title, educations, sumary, experiences, resumeLinks } from './data';
 export default {
   data() {
     return {
@@ -78,7 +78,6 @@ export default {
       educations,
       sumary,
       experiences,
-      resume,
       resumeLinks
     };
   }
