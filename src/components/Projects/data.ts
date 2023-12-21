@@ -10,8 +10,30 @@ import mestoReactPreview from '../../assets/img/projects/Mesto-react-frontend.pn
 import moviesReactPreview from '../../assets/img/projects/Movies.png';
 import moviesApiPreview from '../../assets/img/projects/Movies-api.png';
 import chatPreview from '../../assets/img/projects/chat.png';
+import arkanoidPreview from '../../assets/img/projects/arkanoid.png';
+import portfolioPreview from '../../assets/img/projects/portfolio.png';
+import runToLivePreview from '../../assets/img/projects/run-to-live.png';
 
 export const projects = [
+  {
+    preview: portfolioPreview,
+    title: 'Портфолио',
+    codeLink: 'https://github.com/KarpovYuri/portfolio',
+    description: 'Сайт портфолио.',
+    functional: 'Приложение рассказывает обо мне и демонстрирует мои работы.',
+    technologies: 'HTML, CSS, Nuxt, Vue, JavaScript, TypeScript'
+  },
+  {
+    preview: arkanoidPreview,
+    title: 'Arkanoid',
+    demoLink: 'https://arkanoid-client.vercel.app/',
+    codeLink: 'https://github.com/KarpovYuri/Arkanoid',
+    description: 'Игра Арканоид.',
+    functional:
+      'В приложении реализована механика игры на Canvas API, регистрация, OAuth-авторизация, изменение пароля и аватара, таблица рейтинга, форум, темизация приложения, Server Side Rendering.',
+    technologies:
+      'HTML, SCSS, TypeScript, React, Redux Toolkit, Redux Thunk, Classnames, Node.js, Express.js, PostgreSQL, Sequelize, Service Workers, Jest, Vite, Docker'
+  },
   {
     preview: chatPreview,
     title: 'Мессенджер',
@@ -41,6 +63,15 @@ export const projects = [
     functional:
       'В API реализован функционал регистрации / авторизации пользователя, обновления данных пользователя, получение информации о текущем пользователе, получение списка фильмов, сохранение / удаление фильмов, централизованная обработка ошибок, валидация входящих данных.',
     technologies: 'JavaScript, Node.js, Express.js, Mongoose, MongoDB'
+  },
+  {
+    preview: runToLivePreview,
+    title: 'Run to live',
+    demoLink: 'https://movika.com/runtolive',
+    description: 'Инновационный интерактивный фильм.',
+    functional:
+      'В процессе просмотра фильма предлагается пройти различные интерактивы. В зависимости от результата осуществляется переход к выигрышному или проигрышному варианту продолжения фильма.',
+    technologies: 'HTML, CSS, JavaScript, Webpack'
   },
   {
     preview: mestoReactPreview,
