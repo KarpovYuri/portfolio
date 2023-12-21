@@ -39,11 +39,11 @@ export const educations = [
     projects: [
       {
         title: 'Игра Arkanoid на React.js',
-        href: 'https://github.com/KarpovYuri/Arkanoid'
+        href: 'https://arkanoid-client.vercel.app'
       },
       {
         title: 'Проект Messenger на TypeScript',
-        href: 'https://github.com/KarpovYuri/middle.messenger.praktikum.yandex'
+        href: 'https://amazing-syrniki-922dd2.netlify.app'
       }
     ]
   },
@@ -63,7 +63,7 @@ export const educations = [
     projects: [
       {
         title: 'Фронтенд проекта Movies Explorer на React.js',
-        href: 'https://github.com/KarpovYuri/movies-explorer-frontend'
+        href: 'https://movies.karaudio.ru'
       },
       {
         title: 'Бэкенд проекта Movies Explorer на Express.js',
