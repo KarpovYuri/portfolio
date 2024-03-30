@@ -1,33 +1,3 @@
-<template>
-  <header class="header" :class="{ 'header-top': $route.path !== '/' }">
-    <div class="container">
-      <h1 class="title">
-        <NuxtLink class="link" to="/">{{ title }}</NuxtLink>
-      </h1>
-      <h2 class="subtitle">
-        <span class="profession">{{ subtitleProfession }}</span>
-        {{ subtitleCity }}
-      </h2>
-      <Navbar />
-      <SocialLinks />
-    </div>
-  </header>
-</template>
-
-<script lang="ts">
-import { title, subtitleProfession, subtitleCity } from './data';
-export default {
-  data() {
-    return {
-      title,
-      subtitleProfession,
-      subtitleCity
-    };
-  }
-};
-</script>
-
-<style scoped>
 .header {
   transition: ease-in-out 0.3s;
   position: relative;
@@ -75,7 +45,7 @@ export default {
   left: 0;
   top: 0;
   right: 0;
-  background: var(--background-color);
+  background: var(--main-bg-color);
 }
 
 .header-top .social-links,
@@ -134,4 +104,3 @@ export default {
     font-size: 20px;
   }
 }
-</style>

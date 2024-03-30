@@ -1,0 +1,71 @@
+.social-links_home {
+  margin-top: 40px;
+}
+
+.social-links_contact {
+  margin-top: 8px;
+}
+
+.social-links {
+  display: flex;
+}
+
+.link {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  background: rgba(255, 255, 255, 0.1);
+  color: var(--main-color);
+  margin-right: 8px;
+  border-radius: 50%;
+  transition: ease-in-out 0.3s;
+}
+
+.link_home {
+  width: 40px;
+  height: 40px;
+}
+
+.link_contact {
+  width: 26px;
+  height: 26px;
+}
+
+.link:hover {
+  background: var(--accent-color);
+  transition: ease-in-out 0.3s;
+}
+
+.social-icon {
+  border: none;
+  background-color: transparent;
+  cursor: pointer;
+}
+
+.social-icon_home {
+  width: 20px;
+  height: 20px;
+  background-size: 20px 20px;
+}
+
+.social-icon_contact {
+  width: 16px;
+  height: 16px;
+  background-size: 16px 16px;
+}
+.github {
+  background-image: url('../../assets/icons/socials/github.svg');
+}
+
+.vk {
+  background-image: url('../../assets/icons/socials/vk.svg');
+}
+
+.facebook {
+  background-image: url('../../assets/icons/socials/facebook.svg');
+}
+
+.linkedin {
+  background-image: url('../../assets/icons/socials/linkedin.svg');
+}
+

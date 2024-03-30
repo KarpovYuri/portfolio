@@ -1,51 +1,3 @@
-<template>
-  <nav class="navbar" :class="{ 'navbar-mobile': showModal }">
-    <ul class="nav-links">
-      <li v-for="(link, key) in links" :key="key" class="nav-link">
-        <NuxtLink class="link" :to="link.url" @click="closeModal">
-          {{ link.linkName }}
-        </NuxtLink>
-      </li>
-    </ul>
-    <button class="mobile-nav-toggle" @click="toggleModal" />
-  </nav>
-</template>
-
-<script lang="ts">
-import { links } from './data';
-export default {
-  data() {
-    return {
-      links,
-      width: 0,
-      showModal: false
-    };
-  },
-  created() {
-    if (process.client) {
-      window.addEventListener('resize', this.updateWidth);
-    }
-  },
-  methods: {
-    toggleModal() {
-      this.showModal = !this.showModal;
-    },
-    closeModal() {
-      this.showModal = false;
-    },
-    updateWidth() {
-      if (process.client) {
-        this.width = window.innerWidth;
-        if (this.width > 992) {
-          this.showModal = false;
-        }
-      }
-    }
-  }
-};
-</script>
-
-<style scoped>
 .navbar {
   padding: 0;
   margin-top: 35px;
@@ -184,4 +136,3 @@ export default {
   font-size: 16px;
   position: relative;
 }
-</style>
