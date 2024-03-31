@@ -24,7 +24,7 @@ const countsData = [
   { title: 'Сертификатов', endCount: 8, class: 'awards' }
 ];
 const minCount = 8;
-const duration = 60;
+const duration = 100;
 </script>
 
 <style scoped src="./MyCounts.css"></style>

@@ -1,0 +1,74 @@
+.tool-box {
+  display: flex;
+  gap: 10px;
+  align-items: center;
+  padding: 20px;
+  background: var(--accent-second-color);
+  transition: ease-in-out 0.2s;
+}
+
+.tool-box:hover {
+  background: rgba(255, 255, 255, 0.12);
+}
+
+.tool-icon {
+  height: 32px;
+  width: 32px;
+  background-size: 32px 32px;
+  border: none;
+  background-color: transparent;
+}
+
+.tool-title {
+  font-size: 16px;
+  font-weight: 700;
+  margin: 0;
+}
+
+.webpack {
+  background-image: url('../../assets/icons/tools/webpack.svg');
+}
+
+.vite {
+  background-image: url('../../assets/icons/tools/vite.svg');
+}
+.git {
+  background-image: url('../../assets/icons/tools/git.svg');
+}
+.npm {
+  background-image: url('../../assets/icons/tools/npm.svg');
+}
+.yarn {
+  background-image: url('../../assets/icons/tools/yarn.svg');
+}
+
+.vscode {
+  background-image: url('../../assets/icons/tools/vscode.svg');
+}
+
+.postman {
+  background-image: url('../../assets/icons/tools/postman.svg');
+}
+
+.figma {
+  background-image: url('../../assets/icons/tools/figma.svg');
+}
+.docker {
+  background-image: url('../../assets/icons/tools/docker.svg');
+}
+.nginx {
+  background-image: url('../../assets/icons/tools/nginx.svg');
+}
+
+.tailwind {
+  background-image: url('../../assets/icons/tools/tailwind.svg');
+}
+.webstorm {
+  background-image: url('../../assets/icons/tools/webstorm.svg');
+}
+
+@media (max-width: 576px) {
+  .tool-box {
+    justify-content: center;
+  }
+}
