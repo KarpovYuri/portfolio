@@ -36,7 +36,7 @@ h6 {
   font-family: 'Raleway', sans-serif;
 }
 
-section {
+main {
   overflow: hidden;
   position: absolute;
   width: 100%;
@@ -110,7 +110,7 @@ section {
     max-width: var(--container-lg);
   }
 
-  section {
+  main {
     animation: ani 0.75s forwards;
   }
 }

@@ -3,14 +3,14 @@
     <Head>
       <Title>{{ contactTitle }}</Title>
     </Head>
-    <section>
+    <main>
       <div class="container page-wrp">
         <PageTitle :title="contactTitle" />
         <PageSubtitle :subtitle="contactSubtitle" />
         <Contact />
         <Form />
       </div>
-    </section>
+    </main>
   </div>
 </template>
 

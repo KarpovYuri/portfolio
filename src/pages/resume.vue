@@ -3,13 +3,13 @@
     <Head>
       <Title>Резюме</Title>
     </Head>
-    <section>
+    <main>
       <div class="container page-wrp">
         <PageTitle :title="resumeTitle" />
         <PageSubtitle :subtitle="resumeSubtitle" />
         <Resume />
       </div>
-    </section>
+    </main>
   </div>
 </template>
 

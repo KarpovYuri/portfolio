@@ -3,7 +3,7 @@
     <Head>
       <Title>Обо мне</Title>
     </Head>
-    <section>
+    <main>
       <div class="container page-wrp">
         <page-title title="Обо мне" />
         <page-subtitle subtitle="Узнайте больше обо мне" />
@@ -13,6 +13,6 @@
         <my-tools />
         <my-diplomas />
       </div>
-    </section>
+    </main>
   </div>
 </template>

@@ -16,8 +16,6 @@
 </template>
 
 <script lang="ts" setup>
-import { ref } from 'vue';
-
 const links = [
   { url: '/', linkName: 'Главная' },
   { url: '/about', linkName: 'Обо мне' },

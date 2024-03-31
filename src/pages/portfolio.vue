@@ -3,13 +3,13 @@
     <Head>
       <Title>{{ portfolioTitle }}</Title>
     </Head>
-    <section>
+    <main>
       <div class="container page-wrp">
         <PageTitle :title="portfolioTitle" />
         <PageSubtitle :subtitle="portfolioSubtitle" />
         <Projects />
       </div>
-    </section>
+    </main>
   </div>
 </template>
 
