@@ -16,7 +16,7 @@
             {{ skill.name }}
             <i class="skill-value">{{ skill.value }}%</i>
           </span>
-          <progress-bar :value="skill.value" />
+          <my-skills-progress-bar :value="skill.value" />
         </div>
       </div>
     </div>

@@ -14,7 +14,7 @@
           'px))'
         "
       >
-        <CarouselSlide :slide="slide" />
+        <MyCarouselSlide :slide="slide" />
       </div>
     </div>
   </div>
@@ -26,7 +26,7 @@ export default {
   props: {
     slides: {
       type: Array,
-      default: () => []
+      required: true
     }
   },
   data() {
@@ -55,33 +55,4 @@ export default {
 };
 </script>
 
-<style scoped>
-.carousel {
-  overflow: hidden;
-}
-
-.carousel-wrapper {
-  display: flex;
-  transition-property: transform;
-  box-sizing: content-box;
-  gap: var(--carousel-gap);
-}
-
-.carousel-slide {
-  flex-shrink: 0;
-  width: 100%;
-  transition: transform ease 1s;
-}
-
-@media (min-width: 768px) {
-  .carousel-slide {
-    width: calc((100% - var(--carousel-gap)) / 2);
-  }
-}
-
-@media (min-width: 992px) {
-  .carousel-slide {
-    width: calc((100% - var(--carousel-gap) * 2) / 3);
-  }
-}
-</style>
+<style scoped src="./MyCarousel.css"></style>

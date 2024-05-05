@@ -4,7 +4,7 @@
       <div v-for="(count, key) in countsData" :key="key" class="counts-column">
         <div class="count-box">
           <div :class="'counter-icon ' + count.class" />
-          <my-count
+          <my-counts-elem
             :end-count="count.endCount"
             :min-count="minCount"
             :duration="duration"
@@ -17,6 +17,8 @@
 </template>
 
 <script lang="ts" setup>
+import MyCountsElem from '~/components/MyCounts/MyCountsElem.vue';
+
 const countsData = [
   { title: 'Практических заданий', endCount: 657, class: 'tasks' },
   { title: 'Проектов', endCount: 26, class: 'projects' },

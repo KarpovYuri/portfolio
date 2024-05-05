@@ -72,6 +72,7 @@
   background-size: 32px 32px;
   border: none;
   background-color: transparent;
+  z-index: 99;
 }
 
 .navbar-mobile .mobile-nav-toggle {

@@ -13,8 +13,6 @@ import certificate4 from '../../assets/img/certificates/certificate-4.jpg';
 import certificate5 from '../../assets/img/certificates/certificate-5.jpg';
 import certificate6 from '../../assets/img/certificates/certificate-6.jpg';
 
-export const title = 'Сертификаты';
-
 export const slides = [
   {
     title: 'BeOnMax',
@@ -76,4 +74,4 @@ export const slides = [
     logo: beOnMaxLogo,
     diploma: certificate5
   }
-]
+];

@@ -4,15 +4,17 @@ import htlPreview from '../../assets/img/projects/htl.png';
 import wordpressPreview from '../../assets/img/projects/wordpress.png';
 import uberPreview from '../../assets/img/projects/uber.png';
 import russianTravelPreview from '../../assets/img/projects/russian-travel.png';
-import mestoPreview from '../../assets/img/projects/mesto.png';
+import mestoPreview from '../../assets/img/projects/Mesto.webp';
 import mestoBackendPreview from '../../assets/img/projects/Mesto-backend.png';
-import mestoReactPreview from '../../assets/img/projects/Mesto-react-frontend.png';
-import moviesReactPreview from '../../assets/img/projects/Movies.png';
+import mestoReactPreview from '../../assets/img/projects/Mesto-react-frontend.webp';
+import moviesReactPreview from '../../assets/img/projects/Movies.webp';
 import moviesApiPreview from '../../assets/img/projects/Movies-api.png';
-import chatPreview from '../../assets/img/projects/chat.png';
-import arkanoidPreview from '../../assets/img/projects/arkanoid.png';
-import portfolioPreview from '../../assets/img/projects/portfolio.png';
-import runToLivePreview from '../../assets/img/projects/run-to-live.png';
+import chatPreview from '../../assets/img/projects/chat.webp';
+import arkanoidPreview from '../../assets/img/projects/arkanoid.webp';
+import portfolioPreview from '../../assets/img/projects/portfolio.webp';
+import runToLivePreview from '../../assets/img/projects/run-to-live.webp';
+import bimAssistPromoPreview from '../../assets/img/projects/bimassist-promo.webp';
+import bimAssistCRMPreview from '../../assets/img/projects/bimassist-crm.webp';
 
 export const projects = [
   {
@@ -20,8 +22,25 @@ export const projects = [
     title: 'Портфолио',
     codeLink: 'https://github.com/KarpovYuri/portfolio',
     description: 'Сайт портфолио.',
-    functional: 'Приложение рассказывает обо мне и демонстрирует мои работы.',
+    functional: 'Сайт рассказывает обо мне и демонстрирует мои работы.',
     technologies: 'HTML, CSS, Nuxt, Vue, JavaScript, TypeScript'
+  },
+  {
+    preview: bimAssistCRMPreview,
+    title: 'BimAssist CRM',
+    description: 'CRM-система BimAssist.',
+    functional:
+      'Цифровой помощник грyмера. Автоматизация записи клиентов и расписания.',
+    technologies:
+      'HTML, CSS, SASS, Tailwind, JavaScript, TypeScript, Vue, Pinia, Vite'
+  },
+  {
+    preview: bimAssistPromoPreview,
+    title: 'BimAssist Promo',
+    demoLink: 'https://new.bimassist.ru/',
+    description: 'Сайт CRM-системы BimAssist.',
+    functional: 'Промо сайт CRM-системы для грумеров.',
+    technologies: 'HTML, CSS, Tailwind, JavaScript, Vite'
   },
   {
     preview: arkanoidPreview,
@@ -53,13 +72,15 @@ export const projects = [
     description: 'Проект, позволяющий осуществлять поиск фильмов по базе.',
     functional:
       'Проект написан на React. Реализован функционал поиска фильмов по названию и длительности, сохранение и удаление фильмов, просмотр трейлера, регистрация / авторизация, редактирование профиля пользователя, живая валидация полей форм.',
-    technologies: 'HTML, CSS, React, JavaScript, BEM, Flexbox, Grid Layout, Adaptive, Responsive'
+    technologies:
+      'HTML, CSS, React, JavaScript, BEM, Flexbox, Grid Layout, Adaptive, Responsive'
   },
   {
     preview: moviesApiPreview,
     title: 'Movies explorer Api',
     codeLink: 'https://github.com/KarpovYuri/movies-explorer-api',
-    description: 'Backend проекта Movies, позволяющий осуществлять поиск фильмов по базе.',
+    description:
+      'Backend проекта Movies, позволяющий осуществлять поиск фильмов по базе.',
     functional:
       'В API реализован функционал регистрации / авторизации пользователя, обновления данных пользователя, получение информации о текущем пользователе, получение списка фильмов, сохранение / удаление фильмов, централизованная обработка ошибок, валидация входящих данных.',
     technologies: 'JavaScript, Node.js, Express.js, Mongoose, MongoDB'
@@ -77,17 +98,21 @@ export const projects = [
     preview: mestoReactPreview,
     title: 'Mesto на React',
     demoLink: 'https://mesto-react.karaudio.ru/',
-    codeLink: 'https://github.com/KarpovYuri/react-mesto-api-full/tree/main/frontend',
+    codeLink:
+      'https://github.com/KarpovYuri/react-mesto-api-full/tree/main/frontend',
     description: 'Проект, позволяющий добовлять фотографии интересных мест.',
     functional:
       'Проект написан на React. Реализован функционал редактирования профиля, добавления / удаления карточки, постановки / снятия лайка, открытия фотографии в полном размере.',
-    technologies: 'HTML, CSS, React, JavaScript, BEM, Flexbox, Grid Layout, Adaptive, Responsive'
+    technologies:
+      'HTML, CSS, React, JavaScript, BEM, Flexbox, Grid Layout, Adaptive, Responsive'
   },
   {
     preview: mestoBackendPreview,
     title: 'Mesto Api',
-    codeLink: 'https://github.com/KarpovYuri/react-mesto-api-full/tree/main/backend',
-    description: 'Backend проекта Mesto, позволяющий добовлять фотографии интересных мест.',
+    codeLink:
+      'https://github.com/KarpovYuri/react-mesto-api-full/tree/main/backend',
+    description:
+      'Backend проекта Mesto, позволяющий добовлять фотографии интересных мест.',
     functional:
       'В API реализован функционал регистрации / авторизации пользователя, редактирования профиля, добавления / удаления карточки, постановки / снятия лайка.',
     technologies: 'JavaScript, Node.js, Express.js, Mongoose, MongoDB'
@@ -100,14 +125,16 @@ export const projects = [
     description: 'Проект, позволяющий добовлять фотографии интересных мест.',
     functional:
       'Проект написан в ООП стиле. Реализован функционал редактирования профиля, добавления / удаления карточки, постановки / снятия лайка, открытия фотографии в полном размере.',
-    technologies: 'HTML, CSS, TypeScript, BEM, Flexbox, Grid Layout, Adaptive, Responsive, Webpack'
+    technologies:
+      'HTML, CSS, TypeScript, BEM, Flexbox, Grid Layout, Adaptive, Responsive, Webpack'
   },
   {
     preview: russianTravelPreview,
     title: 'Путешествия по России',
     demoLink: 'https://russian-travel.karaudio.ru/',
     codeLink: 'https://github.com/KarpovYuri/russian-travel',
-    description: 'Лендинг о путешествиях по России и интересных местах для отдыха.',
+    description:
+      'Лендинг о путешествиях по России и интересных местах для отдыха.',
     functional:
       'В проекте реализованы различные подходы к позиционированию и выравниванию элементов, в том числе Flexbox и Grid Layout. Сайт адаптирован для просмотра на мобильных устройствах.',
     technologies: 'HTML, CSS, BEM, Flexbox, Grid Layout, Adaptive, Responsive'

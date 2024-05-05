@@ -42,4 +42,4 @@ watch(currentCount, (value) => {
 });
 </script>
 
-<style scoped src="./MyCount.css"></style>
+<style scoped src="./MyCountsElem.css"></style>

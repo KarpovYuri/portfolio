@@ -1,23 +1,12 @@
 <template>
   <div class="container">
-    <PageTitle :title="title" />
-    <Carousel :slides="slides" />
+    <page-title title="Сертификаты" />
+    <my-carousel :slides="slides" />
   </div>
 </template>
 
-<script lang="ts">
-import { slides, title } from './data';
-export default {
-  name: 'Diplomas',
-  data() {
-    return { slides, title };
-  }
-};
+<script lang="ts" setup>
+import { slides } from './data';
 </script>
 
-<style scoped>
-.container {
-  background: var(--second-bg-color);
-  padding: var(--container-padding) 0;
-}
-</style>
+<style scoped src="./MyDiplomas.css"></style>

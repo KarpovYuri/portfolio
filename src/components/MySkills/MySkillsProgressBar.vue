@@ -29,4 +29,4 @@ onMounted(() => {
 });
 </script>
 
-<style scoped src="./ProgressBar.css"></style>
+<style scoped src="./MySkillsProgressBar.css"></style>

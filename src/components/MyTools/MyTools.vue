@@ -7,7 +7,7 @@
         :key="`tool_${index}`"
         class="tools-column"
       >
-        <my-tool :title="tool.title" :icon-class="tool.class" />
+        <my-tools-elem :title="tool.title" :icon-class="tool.class" />
       </div>
     </div>
   </div>
