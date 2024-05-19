@@ -1,58 +1,75 @@
 <!-- eslint-disable vue/html-indent -->
 <template>
-  <div class="carousel">
+  <div ref="carousel" class="carousel">
     <div class="carousel-wrapper">
       <div
         v-for="(slide, index) in slides"
         :key="index"
         class="carousel-slide"
+        :class="{ animation: Math.abs(isAnimation) === 1 }"
         :style="
-          'transform: translateX(calc(-' +
-          100 * currentSlideIndex +
-          '% - ' +
-          carouselGap * currentSlideIndex +
+          'transform: translateX(calc(' +
+          100 * isAnimation +
+          '% + ' +
+          carouselGap * isAnimation +
+          'px - 100% - ' +
+          carouselGap +
           'px))'
         "
       >
-        <MyCarouselSlide :slide="slide" />
+        <my-carousel-slide :slide="slide" />
       </div>
     </div>
+    <img
+      src="~/assets/icons/arrow-left.svg"
+      alt="left-arrow"
+      class="carousel-button"
+      @click="prevSlide"
+    />
+    <img
+      src="~/assets/icons/arrow-left.svg"
+      alt="right-arrow"
+      class="carousel-button carousel-button__right"
+      @click="nextSlide"
+    />
   </div>
 </template>
 
-<script>
-export default {
-  name: 'Carousel',
-  props: {
-    slides: {
-      type: Array,
-      required: true
-    }
-  },
-  data() {
-    return {
-      currentSlideIndex: 0,
-      carouselGap: 30
-    };
-  },
-  mounted() {
-    setInterval(() => this.nextSlide(), 4000);
-  },
-  methods: {
-    prevSlide() {
-      if (this.currentSlideIndex > 0) {
-        this.currentSlideIndex--;
-      }
-    },
-    nextSlide() {
-      if (this.currentSlideIndex >= this.slides.length - 3) {
-        this.currentSlideIndex = 0;
-      } else {
-        this.currentSlideIndex++;
-      }
-    }
+<script lang="ts" setup>
+const props = defineProps<{
+  slides: Array<{}>;
+}>();
+
+const slides = ref(props.slides);
+const isAnimation = ref(0);
+const carouselGap = ref(30);
+const carousel = ref();
+
+function prevSlide() {
+  if (Math.abs(isAnimation.value) === 1) {
+    return;
   }
-};
+  isAnimation.value = 1;
+  setTimeout(() => {
+    isAnimation.value = 0;
+    const slide = slides.value[slides.value.length - 1];
+    slides.value.pop();
+    slides.value.unshift(slide);
+  }, 500);
+}
+
+function nextSlide() {
+  if (Math.abs(isAnimation.value) === 1) {
+    return;
+  }
+  isAnimation.value = -1;
+  setTimeout(() => {
+    isAnimation.value = 0;
+    const slide = slides.value[0];
+    slides.value.shift();
+    slides.value.push(slide);
+  }, 500);
+}
 </script>
 
 <style scoped src="./MyCarousel.css"></style>

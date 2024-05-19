@@ -16,6 +16,12 @@ import certificate6 from '../../assets/img/certificates/certificate-6.jpg';
 export const slides = [
   {
     title: 'BeOnMax',
+    subtitle: 'Git-управление версиями',
+    logo: beOnMaxLogo,
+    diploma: certificate5
+  },
+  {
+    title: 'BeOnMax',
     subtitle: 'Веб-разработчик',
     logo: beOnMaxLogo,
     diploma: certificate1
@@ -67,11 +73,5 @@ export const slides = [
     subtitle: 'Инструменты Веб-разработчика',
     logo: beOnMaxLogo,
     diploma: certificate4
-  },
-  {
-    title: 'BeOnMax',
-    subtitle: 'Git-управление версиями',
-    logo: beOnMaxLogo,
-    diploma: certificate5
   }
 ];

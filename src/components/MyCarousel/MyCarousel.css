@@ -1,5 +1,6 @@
 .carousel {
   overflow: hidden;
+  position: relative;
 }
 
 .carousel-wrapper {
@@ -12,17 +13,63 @@
 .carousel-slide {
   flex-shrink: 0;
   width: 100%;
-  transition: transform ease 1s;
+}
+
+.carousel-button {
+  width: 64px;
+  height: 64px;
+  position: absolute;
+  top: 22%;
+  transform: translateY(50%);
+  cursor: pointer;
+  filter: drop-shadow(0 0 3px var(--third-color));
+  transition: all .25s;
+}
+
+.carousel-button:hover {
+  transform: translateY(50%) scale(1.2);
+}
+
+.carousel-button__right {
+  right: 0;
+  transform: translateY(50%) rotate(180deg);
+}
+
+.carousel-button__right:hover {
+  transform: translateY(50%) rotate(180deg) scale(1.2);
+}
+
+.animation {
+  transition: transform ease .5s;
 }
 
 @media (min-width: 768px) {
   .carousel-slide {
     width: calc((100% - var(--carousel-gap)) / 2);
   }
+  .carousel-button {
+    width: 48px;
+    height: 48px;
+    top: 17%;
+  }
 }
 
 @media (min-width: 992px) {
   .carousel-slide {
     width: calc((100% - var(--carousel-gap) * 2) / 3);
+  }
+}
+
+@media (min-width: 1200px) {
+  .carousel-button {
+    width: 64px;
+    height: 64px;
+    top: 15%;
+  }
+}
+
+@media (min-width: 1400px) {
+  .carousel-button {
+    top: 19%;
   }
 }
