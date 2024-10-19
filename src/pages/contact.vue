@@ -15,7 +15,7 @@
 </template>
 
 <script lang="ts">
-import { contactTitle, contactSubtitle } from './pageData';
+import { contactTitle, contactSubtitle } from '../utils/pageData';
 export default {
   data() {
     return {

@@ -14,7 +14,7 @@
 </template>
 
 <script lang="ts">
-import { resumeTitle, resumeSubtitle } from './pageData';
+import { resumeTitle, resumeSubtitle } from '../utils/pageData';
 export default {
   data() {
     return {

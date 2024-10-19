@@ -14,7 +14,7 @@
 </template>
 
 <script lang="ts">
-import { portfolioTitle, portfolioSubtitle } from './pageData';
+import { portfolioTitle, portfolioSubtitle } from '../utils/pageData';
 export default {
   data() {
     return {
