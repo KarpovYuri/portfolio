@@ -2,7 +2,7 @@
   <div class="container">
     <div class="column">
       <h3 class="resume-elem-title">{{ title.sumary }}</h3>
-      <div class="experience-item">
+      <div class="experience-item experience-item_summary">
         <h4 class="experience-item-title">{{ sumary.title }}</h4>
         <p class="experience-item-dsc">
           <em>{{ sumary.description }}</em>
@@ -13,30 +13,16 @@
           </li>
         </ul>
       </div>
-      <h3 class="resume-elem-title">{{ title.experience }}</h3>
-      <div v-for="(experience, key) in experiences" :key="key" class="experience-item">
-        <h4 class="experience-item-title">{{ experience.title }}</h4>
-        <h5 class="experience-item-years">{{ experience.years }}</h5>
-        <p class="experience-item-dsc">
-          <em>{{ experience.organization }}</em>
-        </p>
-        <p v-for="(desc, index) in experience.description" :key="index" class="experience-item-dsc">
-          {{ desc }}
-        </p>
-        <ul v-if="experience.projects" class="list">
-          <li v-for="(project, index) in experience.projects" :key="index" class="list-item">
-            <NuxtLink class="experience-item-link" :href="project.href" target="_blank">
-              {{ project.title }}
-            </NuxtLink>
-          </li>
-        </ul>
-      </div>
-    </div>
-    <div class="column">
       <h3 class="resume-elem-title">{{ title.education }}</h3>
-      <div v-for="(education, key) in educations" :key="key" class="experience-item">
+      <div
+        v-for="(education, key) in educations"
+        :key="key"
+        class="experience-item"
+      >
         <h4 class="experience-item-title">{{ education.title }}</h4>
-        <h5 v-show="education.years" class="experience-item-years">{{ education.years }}</h5>
+        <h5 v-show="education.years" class="experience-item-years">
+          {{ education.years }}
+        </h5>
         <p class="experience-item-dsc">
           <em>{{ education.organization }}</em>
         </p>
@@ -47,8 +33,52 @@
           </li>
         </ul>
         <ul v-if="education.projects" class="list">
-          <li v-for="(project, index) in education.projects" :key="index" class="list-item">
-            <NuxtLink class="experience-item-link" :href="project.href" target="_blank">
+          <li
+            v-for="(project, index) in education.projects"
+            :key="index"
+            class="list-item"
+          >
+            <NuxtLink
+              class="experience-item-link"
+              :href="project.href"
+              target="_blank"
+            >
+              {{ project.title }}
+            </NuxtLink>
+          </li>
+        </ul>
+      </div>
+    </div>
+    <div class="column">
+      <h3 class="resume-elem-title">{{ title.experience }}</h3>
+      <div
+        v-for="(experience, key) in experiences"
+        :key="key"
+        class="experience-item"
+      >
+        <h4 class="experience-item-title">{{ experience.title }}</h4>
+        <h5 class="experience-item-years">{{ experience.years }}</h5>
+        <p class="experience-item-dsc">
+          <em>{{ experience.organization }}</em>
+        </p>
+        <p
+          v-for="(desc, index) in experience.description"
+          :key="index"
+          class="experience-item-dsc"
+        >
+          {{ desc }}
+        </p>
+        <ul v-if="experience.projects" class="list">
+          <li
+            v-for="(project, index) in experience.projects"
+            :key="index"
+            class="list-item"
+          >
+            <NuxtLink
+              class="experience-item-link"
+              :href="project.href"
+              target="_blank"
+            >
               {{ project.title }}
             </NuxtLink>
           </li>
@@ -60,7 +90,11 @@
           :key="index"
           class="list-item list-item_link"
         >
-          <NuxtLink class="experience-item-link" :href="resumeLink.link" target="_blank">
+          <NuxtLink
+            class="experience-item-link"
+            :href="resumeLink.link"
+            target="_blank"
+          >
             {{ resumeLink.linkText }}
           </NuxtLink>
         </li>
@@ -118,7 +152,7 @@ export default {
   box-sizing: border-box;
 }
 
-.experience-item:first-of-type,
+.experience-item_summary,
 .experience-item:last-of-type {
   padding-bottom: 0;
 }
