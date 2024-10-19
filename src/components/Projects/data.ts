@@ -1,22 +1,51 @@
-import dinamikPreview from '../../assets/img/projects/dinamik.png';
-import vrtPreview from '../../assets/img/projects/vrtstudio.png';
-import htlPreview from '../../assets/img/projects/htl.png';
-import wordpressPreview from '../../assets/img/projects/wordpress.png';
-import uberPreview from '../../assets/img/projects/uber.png';
-import russianTravelPreview from '../../assets/img/projects/russian-travel.png';
+import dinamikPreview from '../../assets/img/projects/dinamik.webp';
+import vrtPreview from '../../assets/img/projects/vrtstudio.webp';
+import htlPreview from '../../assets/img/projects/htl.webp';
+import wordpressPreview from '../../assets/img/projects/wordpress.webp';
+import uberPreview from '../../assets/img/projects/uber.webp';
+import russianTravelPreview from '../../assets/img/projects/russian-travel.webp';
 import mestoPreview from '../../assets/img/projects/Mesto.webp';
-import mestoBackendPreview from '../../assets/img/projects/Mesto-backend.png';
+import mestoBackendPreview from '../../assets/img/projects/Mesto-backend.webp';
 import mestoReactPreview from '../../assets/img/projects/Mesto-react-frontend.webp';
 import moviesReactPreview from '../../assets/img/projects/Movies.webp';
-import moviesApiPreview from '../../assets/img/projects/Movies-api.png';
+import moviesApiPreview from '../../assets/img/projects/Movies-api.webp';
 import chatPreview from '../../assets/img/projects/chat.webp';
 import arkanoidPreview from '../../assets/img/projects/arkanoid.webp';
 import portfolioPreview from '../../assets/img/projects/portfolio.webp';
 import runToLivePreview from '../../assets/img/projects/run-to-live.webp';
 import bimAssistPromoPreview from '../../assets/img/projects/bimassist-promo.webp';
 import bimAssistCRMPreview from '../../assets/img/projects/bimassist-crm.webp';
+import bimAssistClientsPreview from '../../assets/img/projects/bimassist-clients.webp';
 
 export const projects = [
+  {
+    preview: bimAssistCRMPreview,
+    title: 'BimAssist CRM',
+    demoLink: 'https://crm.dev-bimassist.ru/',
+    description: 'CRM-система BimAssist.',
+    functional:
+      'Цифровой помощник грyмера. Автоматизация записи клиентов и расписания.',
+    technologies:
+      'HTML, CSS, SASS, Tailwind, JavaScript, TypeScript, Vue, Vuex, Pinia, VueRouter, Axios, Vite'
+  },
+  {
+    preview: bimAssistClientsPreview,
+    title: 'BimAssist Clients',
+    demoLink: 'https://clients.bimassist.ru/2/',
+    description: 'Клиентское приложение BimAssist.',
+    functional:
+      'Приложение для записи питомцев на груминг и вет услуги.',
+    technologies:
+      'HTML, CSS, SASS, Tailwind, JavaScript, TypeScript, Vue, Vuex, Pinia, VueRouter, Axios, Vite'
+  },
+  {
+    preview: bimAssistPromoPreview,
+    title: 'BimAssist Promo',
+    demoLink: 'https://bimassist.ru/',
+    description: 'Сайт CRM-системы BimAssist.',
+    functional: 'Промо сайт CRM-системы для грумеров.',
+    technologies: 'HTML, CSS, Tailwind, JavaScript, Vite'
+  },
   {
     preview: portfolioPreview,
     title: 'Портфолио',
@@ -24,23 +53,6 @@ export const projects = [
     description: 'Сайт портфолио.',
     functional: 'Сайт рассказывает обо мне и демонстрирует мои работы.',
     technologies: 'HTML, CSS, Nuxt, Vue, JavaScript, TypeScript'
-  },
-  {
-    preview: bimAssistCRMPreview,
-    title: 'BimAssist CRM',
-    description: 'CRM-система BimAssist.',
-    functional:
-      'Цифровой помощник грyмера. Автоматизация записи клиентов и расписания.',
-    technologies:
-      'HTML, CSS, SASS, Tailwind, JavaScript, TypeScript, Vue, Pinia, Vite'
-  },
-  {
-    preview: bimAssistPromoPreview,
-    title: 'BimAssist Promo',
-    demoLink: 'https://new.bimassist.ru/',
-    description: 'Сайт CRM-системы BimAssist.',
-    functional: 'Промо сайт CRM-системы для грумеров.',
-    technologies: 'HTML, CSS, Tailwind, JavaScript, Vite'
   },
   {
     preview: arkanoidPreview,
