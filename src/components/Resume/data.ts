@@ -123,7 +123,7 @@ export const experiences = [
     projects: [
       {
         title: 'CRM-система BimAssist',
-        href: 'https://crm.dev-bimassist.ru'
+        href: 'https://business.bimassist.ru'
       },
       {
         title: 'Клиентское приложение BimAssist',
