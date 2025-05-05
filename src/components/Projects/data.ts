@@ -132,7 +132,7 @@ export const projects = [
   {
     preview: mestoPreview,
     title: 'Mesto на TypeScript',
-    demoLink: 'https://mesto.karaudio.ru/',
+    demoLink: 'https://mesto.karpov-dev.ru/',
     codeLink: 'https://github.com/KarpovYuri/mesto',
     description: 'Проект, позволяющий добовлять фотографии интересных мест.',
     functional:
@@ -143,7 +143,7 @@ export const projects = [
   {
     preview: russianTravelPreview,
     title: 'Путешествия по России',
-    demoLink: 'https://russian-travel.karaudio.ru/',
+    demoLink: 'https://russian-travel.karpov-dev.ru/',
     codeLink: 'https://github.com/KarpovYuri/russian-travel',
     description:
       'Лендинг о путешествиях по России и интересных местах для отдыха.',
@@ -154,7 +154,7 @@ export const projects = [
   {
     preview: uberPreview,
     title: 'Uber Partners',
-    demoLink: 'https://uber.karaudio.ru/',
+    demoLink: 'https://uber.karpov-dev.ru/',
     codeLink: 'https://github.com/KarpovYuri/uber',
     description: 'Одностраничный сайт компании UBER PARTNERS',
     functional:
@@ -164,7 +164,7 @@ export const projects = [
   {
     preview: wordpressPreview,
     title: 'Wordpress интенсив',
-    demoLink: 'https://wordpress.karaudio.ru/',
+    demoLink: 'https://wordpress.karpov-dev.ru/',
     codeLink: 'https://github.com/KarpovYuri/wordpress',
     description: 'Одностраничный сайт про Wordpress интенсив.',
     functional:
@@ -174,7 +174,7 @@ export const projects = [
   {
     preview: htlPreview,
     title: 'Научиться учиться',
-    demoLink: 'https://how-to-learn.karaudio.ru/',
+    demoLink: 'https://how-to-learn.karpov-dev.ru/',
     codeLink: 'https://github.com/KarpovYuri/how-to-learn',
     description: 'Одностраничный сайт о методах и принципах обучения.',
     functional:
@@ -191,7 +191,7 @@ export const projects = [
   {
     preview: dinamikPreview,
     title: 'Студия Динамик',
-    demoLink: 'https://dinamik.karaudio.ru/',
+    demoLink: 'https://dinamik.karpov-dev.ru/',
     description: 'Одностраничный сайт студии автозвука Динамик',
     technologies: 'HTML, CSS, Javascript, jQuery'
   }
