@@ -10,21 +10,13 @@ export const bottomContent = [
 export const aboutData = [
   {
     columnData: [
-      // { field: 'Дата рождения:', value: '28 Июня 1978' },
-      { field: 'Сайт:', value: 'www.karaudio.ru' },
+      { field: 'Сайт:', value: 'www.karpov-dev.ru' },
       { field: 'Телефон:', value: '+7 950 775 7533' },
       { field: 'Город:', value: 'Воронеж, Россия' }
     ]
   },
   {
     columnData: [
-      // {
-      //   field: 'Возраст:',
-      //   value: Math.floor(
-      //     (new Date().getTime() - new Date('1978/6/28').getTime()) /
-      //       (1000 * 3600 * 24 * 365.25)
-      //   )
-      // },
       { field: 'GitHub:', value: 'github.com/KarpovYuri' },
       { field: 'Email:', value: 'yurick@bk.ru' },
       { field: 'Freelance:', value: 'Возможен' }

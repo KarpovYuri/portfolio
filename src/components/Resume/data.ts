@@ -69,7 +69,7 @@ export const educations = [
     projects: [
       {
         title: 'Фронтенд проекта Movies Explorer на React.js',
-        href: 'https://movies.karaudio.ru'
+        href: 'https://movies.karpov-dev.ru'
       },
       {
         title: 'Бэкенд проекта Movies Explorer на Express.js',

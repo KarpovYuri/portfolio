@@ -79,7 +79,7 @@ export const projects = [
   {
     preview: moviesReactPreview,
     title: 'Movies explorer',
-    demoLink: 'https://movies.karaudio.ru/',
+    demoLink: 'https://movies.karpov-dev.ru/',
     codeLink: 'https://github.com/KarpovYuri/movies-explorer-frontend',
     description: 'Проект, позволяющий осуществлять поиск фильмов по базе.',
     functional:
@@ -109,7 +109,7 @@ export const projects = [
   {
     preview: mestoReactPreview,
     title: 'Mesto на React',
-    demoLink: 'https://mesto-react.karaudio.ru/',
+    demoLink: 'https://mesto-react.karpov-dev.ru/',
     codeLink:
       'https://github.com/KarpovYuri/react-mesto-api-full/tree/main/frontend',
     description: 'Проект, позволяющий добовлять фотографии интересных мест.',
