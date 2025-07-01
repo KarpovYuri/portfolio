@@ -21,7 +21,7 @@ import MyCountsElem from '~/components/MyCounts/MyCountsElem.vue';
 
 const countsData = [
   { title: 'Практических заданий', endCount: 657, class: 'tasks' },
-  { title: 'Проектов', endCount: 26, class: 'projects' },
+  { title: 'Проекта', endCount: 42, class: 'projects' },
   { title: 'Часов обучения', endCount: 1012, class: 'educate' },
   { title: 'Сертификатов', endCount: 8, class: 'awards' }
 ];

@@ -27,18 +27,20 @@
 const skillsData = [
   {
     column: [
-      { name: 'HTML', value: 95 },
+      { name: 'HTML', value: 90 },
       { name: 'CSS / Sass / SCSS', value: 90 },
       { name: 'JavaScript', value: 85 },
-      { name: 'TypeScript', value: 80 }
+      { name: 'TypeScript', value: 85 },
+      { name: 'Golang', value: 50 }
     ]
   },
   {
     column: [
-      { name: 'Vue / Nuxt ', value: 90 },
-      { name: 'React / Redux', value: 90 },
-      { name: 'Node JS / Express / Mongoose', value: 80 },
-      { name: 'MongoDB / PostgreSQL', value: 75 }
+      { name: 'Vue / Nuxt', value: 95 },
+      { name: 'Angular', value: 80 },
+      { name: 'React', value: 80 },
+      { name: 'Node JS / Express / Mongoose', value: 60 },
+      { name: 'MongoDB / PostgreSQL', value: 60 }
     ]
   }
 ];
