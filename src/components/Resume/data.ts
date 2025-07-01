@@ -1,14 +1,14 @@
-import resume from '../../static/resume.pdf';
+// import resume from '../../static/resume.pdf';
 
 export const resumeLinks = [
   {
     link: 'https://voronezh.hh.ru/resume/7841421eff04fbdd630039ed1f7a56326f5a52?disableBrowserCache=true&hhtmFrom=resume_list',
     linkText: 'Резюме на hh.ru'
-  },
-  {
-    link: resume,
-    linkText: 'Резюме в PDF'
   }
+  // {
+  //   link: resume,
+  //   linkText: 'Резюме в PDF'
+  // }
 ];
 
 export const title = {
@@ -108,7 +108,7 @@ export const educations = [
 export const experiences = [
   {
     title: 'Frontend-разработчик',
-    years: '2023 - 2024',
+    years: '2023 - 2025',
     organization: 'Грум Айти',
     description: [
       'Разрабатывал CRM-систему для груминг-салонов и ветеринарных клиник, которая включает управление складскими запасами, расчет зарплаты, аналитику, систему оповещений и рассылок, а также программы лояльности с акциями и бонусными картами.',
