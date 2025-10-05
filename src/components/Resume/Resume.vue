@@ -38,13 +38,13 @@
             :key="index"
             class="list-item"
           >
-            <NuxtLink
+            <a
               class="experience-item-link"
               :href="project.href"
               target="_blank"
             >
               {{ project.title }}
-            </NuxtLink>
+            </a>
           </li>
         </ul>
       </div>
@@ -74,29 +74,29 @@
             :key="index"
             class="list-item"
           >
-            <NuxtLink
+            <a
               class="experience-item-link"
               :href="project.href"
               target="_blank"
             >
               {{ project.title }}
-            </NuxtLink>
+            </a>
           </li>
         </ul>
       </div>
-      <ul class="list list_link">
+      <ul class="list">
         <li
           v-for="(resumeLink, index) in resumeLinks"
           :key="index"
           class="list-item list-item_link"
         >
-          <NuxtLink
+          <a
             class="experience-item-link"
             :href="resumeLink.link"
             target="_blank"
           >
             {{ resumeLink.linkText }}
-          </NuxtLink>
+          </a>
         </li>
       </ul>
     </div>
@@ -207,10 +207,6 @@ export default {
   margin-bottom: 16px;
   font-size: 16px;
   line-height: 24px;
-}
-
-list_link {
-  margin-top: 68px;
 }
 
 .list li {
